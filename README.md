@@ -9,5 +9,7 @@ Sunbird Obsrv is one of the digital building blocks within [Sunbird](https://sun
 4. https://github.com/project-sunbird/sunbird-report-service
 5. https://github.com/project-sunbird/sunbird-core-dataproducts
 
+_We are in the process of bringing all the above code repositories here to the Sunbird-Obsrv organisation._
+
 
 For more information see the [Sunbird Obsrv](https://obsrv.sunbird.org) documentation page.
