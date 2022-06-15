@@ -40,7 +40,7 @@ Sunbird Obsrv is leveraged in DIKSHA - Digital Infrastructure for Knowledge Shar
 
 
 
-_<mark style="color:orange;">****</mark>_[_<mark style="color:orange;">**Contribute to Sunbird LERN!**</mark>_ ](https://github.com/Sunbird-Obsrv/Community/discussions/categories/contribution)_<mark style="color:orange;">****</mark>_
+_<mark style="color:orange;">****</mark>_[_<mark style="color:orange;">**Contribute to Sunbird OBSRV**</mark>_](https://github.com/Sunbird-Obsrv/Community/discussions/categories/contribution)_<mark style="color:orange;">****</mark>_
 
 
 
