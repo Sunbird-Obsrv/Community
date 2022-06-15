@@ -8,6 +8,7 @@
 | **AnalyticsCore**                                     | [**release-4.10.5\_RC1**](https://github.com/project-sunbird/sunbird-analytics-core/tree/release-4.10.5\_RC1)    | [**release-4.10.5\_RC1**](https://github.com/project-sunbird/sunbird-data-pipeline/tree/release-4.10.5\_RC1) |
 | **CoreDataProducts**                                  | [**release-4.10.5\_RC1**](https://github.com/project-sunbird/sunbird-core-dataproducts/tree/release-4.10.5\_RC1) | [**release-4.10.5\_RC1**](https://github.com/project-sunbird/sunbird-data-pipeline/tree/release-4.10.5\_RC1) |
 | **EdDataProducts**                                    | [**release-4.10.5\_RC1**](https://github.com/Sunbird-Ed/sunbird-data-products/tree/release-4.10.5\_RC1)          | [**release-4.10.5\_RC1**](https://github.com/project-sunbird/sunbird-data-pipeline/tree/release-4.10.5\_RC1) |
+| **ETL Jobs**                                                                                           | [**release-4.10.5_RC2**](https://github.com/Sunbird-Ed/sunbird-data-products/tree/release-4.10.5_RC2)      | [**release-4.10.5_RC2**](https://github.com/project-sunbird/sunbird-data-pipeline/tree/release-4.10.5_RC2) |
 
 #### **Features**
 
