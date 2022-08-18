@@ -22,7 +22,7 @@
 
 ## Use
 
-* [Release Notes](use/release-notes.md)
+* [Release Notes](use/release-notes/README.md)
 * [Installation Guide](use/installation-guide.md)
 * [System Requirements](use/system-requirements.md)
 
