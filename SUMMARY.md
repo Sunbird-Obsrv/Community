@@ -25,6 +25,7 @@
 * [Release Notes](use/release-notes/README.md)
   * [Release V 5.0.0 (latest)](use/release-notes/release-v-5.0.0-latest.md)
   * [Release V 4.10.0](use/release-notes/release-v-4.10.5.md)
+* [Release Calendar](use/release-calendar.md)
 * [Installation Guide](use/installation-guide.md)
 * [System Requirements](use/system-requirements.md)
 
