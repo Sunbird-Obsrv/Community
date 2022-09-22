@@ -18,7 +18,7 @@
 ## ENGAGE
 
 * [Discuss](https://github.com/Sunbird-Obsrv/Community/discussions)
-* [Contribute to Obsrv](https://github.com/Sunbird-Obsrv/Community/discussions/14)
+* [Contribute to Obsrv](https://github.com/Sunbird-Obsrv/Community/discussions/16)
 
 ## Use
 
@@ -26,6 +26,7 @@
   * [Release V 5.1.0 (latest) ](use/release-notes/release-v-5.1.0-latest.md)
   * [Release V 5.0.0](use/release-notes/release-v-5.0.0.md)
   * [Release V 4.10.0](use/release-notes/release-v-4.10.5.md)
+* [Release Calendar](use/release-calendar.md)
 * [Installation Guide](use/installation-guide.md)
 * [System Requirements](use/system-requirements.md)
 
