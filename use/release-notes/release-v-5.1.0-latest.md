@@ -20,10 +20,8 @@
 **Sprint 1**
 * Obsrv Infra single click installation in the local mode [#OB-27](https://project-sunbird.atlassian.net/browse/OB-27)
 * CSP Migration plan analysis [#OB-45](https://project-sunbird.atlassian.net/browse/OB-45)
-* Verification of the SDK Upgrade in the analytics [#OB-21](https://project-sunbird.atlassian.net/browse/OB-21)
 
 **Sprint 2**
-* Provision script changes to support any CSP [#OB-33](https://project-sunbird.atlassian.net/browse/OB-33)
 * Moving of all the repos into the obsrv community and deployment script changes. [#OB-39](https://project-sunbird.atlassian.net/browse/OB-39)
 * Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
 
