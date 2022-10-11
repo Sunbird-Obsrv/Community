@@ -13,7 +13,7 @@ cd sunbird-telemetry-service
 ```
 
 The telemetry service image would now be available as <your dockerhub user>/telemetry-service:release-3.3.0
-Download this [docker-compose.yml](../.gitbook/assets/docker-compose.yml) file and run the below command to get the service up
+Download this [docker-compose.yml](../.gitbook/assets/docker-compose.yml) file and run the below command to get the service up. In the docker compose file, you may change the telemetry service image to use your own account (eg: change to <your dockerhub user>/telemetry-service:release-3.3.0)
 
 ```shell
 docker-compose up -d
