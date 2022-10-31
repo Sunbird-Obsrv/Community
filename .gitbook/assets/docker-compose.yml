@@ -23,7 +23,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   telemetry-service:
-    image: coolbung/telemetry-service:release-3.3.0
+    image: sunbird/telemetry-service:release-3.3.0_RC1
     ports:
       - 9001:9001
     environment:
