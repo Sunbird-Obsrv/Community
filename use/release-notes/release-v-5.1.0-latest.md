@@ -33,7 +33,7 @@
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | [**release-5.1.0\_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC1) | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC3) |
+| **Analytics Service**                                  | [**release-5.1.0\_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC1) | [**release-5.1.0\_RC3**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC3) |
 
 
 ### **Deprecated variables**
@@ -46,7 +46,7 @@
 
 | Service                                             | Old Configurations                                                                                                         | New Configurations                                                                                                  |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | azure_private_account_name, azure_private_account_secret, azure_public_account_secret, azure_public_account_name | cloud_private_account_secret, cloud_private_account_name, cloud_public_account_secret, cloud_public_account_name |
+| **Analytics Service**                                  | azure_private_account_name, azure_private_account_secret, azure_public_account_secret, azure_public_account_name | cloud_private_storage_secret, cloud_private_storage_accountname, cloud_public_storage_secret, cloud_public_storage_accountname |
 
 
 
