@@ -26,6 +26,9 @@
 * Provision script changes to support any CSP [#OB-33](https://project-sunbird.atlassian.net/browse/OB-33)
 * Moving of all the repos into the obsrv community and deployment script changes. [#OB-39](https://project-sunbird.atlassian.net/browse/OB-39)
 * Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
+* Obsrv Query Engine Deployment Script. [#OB-82](https://project-sunbird.atlassian.net/browse/OB-82)
+* Obsrv Query Engine API Implementation [#OB-51](https://project-sunbird.atlassian.net/browse/OB-88)
+
 
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
