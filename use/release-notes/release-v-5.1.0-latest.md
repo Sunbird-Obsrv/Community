@@ -24,10 +24,28 @@
 **Sprint 2**
 * Moving of all the repos into the obsrv community and deployment script changes. [#OB-39](https://project-sunbird.atlassian.net/browse/OB-39)
 * Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
+* Obsrv Query Engine Deployment Script. [#OB-82](https://project-sunbird.atlassian.net/browse/OB-82)
+* Obsrv Query Engine API Implementation [#OB-51](https://project-sunbird.atlassian.net/browse/OB-88)
+
 
 #### **Github Tag Details**
-
- Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
+| Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| | |  |
-| | |  |
+| **Analytics Service**                                  | [**release-5.1.0\_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC1) | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+
+
+### **Deprecated variables**
+* azure_private_account_secret
+* azure_private_account_name
+* azure_public_account_secret
+* azure_public_account_name
+
+### **Configurations**
+
+| Service                                             | Old Configurations                                                                                                         | New Configurations                                                                                                  |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
+| **Analytics Service**                                  | azure_private_account_name, azure_private_account_secret, azure_public_account_secret, azure_public_account_name | cloud_private_account_secret, cloud_private_account_name, cloud_public_account_secret, cloud_public_account_name |
+
+
+
+
