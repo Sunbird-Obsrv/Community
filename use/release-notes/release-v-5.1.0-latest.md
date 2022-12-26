@@ -31,7 +31,7 @@
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | [**release-5.1.0\_RC2**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC1) | [**release-5.1.0\_RC3**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC3) |
+| **Analytics Service**                                  | [**release-5.1.0\_RC2**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC2) | [**release-5.1.0\_RC3**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC3) |
 
 
 ### **Deprecated variables**
