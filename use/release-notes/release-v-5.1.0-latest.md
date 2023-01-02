@@ -33,20 +33,30 @@
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | [**release-5.1.0\_RC2**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC2) | [**release-5.1.0\_RC3**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC3) |
+| **Analytics Service**                                  | [**release-5.1.0\_RC2**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.0_RC2) | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Spark Provision**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Spark HD Insights Cluster Provision**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Secor**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Flink Jobs**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Druid**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
+| **Sunbird Analytics Core**                                  | NA | [**release-5.1.0\_RC1**](https://github.com/project-sunbird/sunbird-devops/releases/tag/release-5.1.0_RC1) |
 
-
-### **Deprecated variables**
-* azure_private_account_secret
-* azure_private_account_name
-* azure_public_account_secret
-* azure_public_account_name
 
 ### **Configurations**
 
 | Service                                             | Old Configurations                                                                                                         | New Configurations                                                                                                  |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | azure_private_account_name, azure_private_account_secret, azure_public_account_secret, azure_public_account_name | cloud_private_storage_secret, cloud_private_storage_accountname, cloud_public_storage_secret, cloud_public_storage_accountname |
+| **Analytics Service**                                  | azure_private_account_name, azure_private_account_secret, azure_public_account_secret, azure_public_account_name | cloud_private_storage_accountname, cloud_private_storage_secret, cloud_public_storage_secret, cloud_public_storage_accountname |
+| **Spark Provision**                                  | sunbird_private_storage_account_name, sunbird_private_storage_account_key, sunbird_public_storage_account_name, sunbird_public_storage_account_key, s3_storage_key, s3_storage_secret, sunbird_private_azure_report_container_name, sunbird_public_azure_report_container_name, azure_private_storage_account_name, azure_private_storage_account_key  | cloud_private_storage_accountname, cloud_private_storage_secret, cloud_public_storage_accountname, cloud_public_storage_secret, cloud_storage_privatereports_bucketname, cloud_storage_publicreports_bucketname, cloud_private_storage_accountname, cloud_private_storage_secret |
+| **Spark HD Insight Provision**                                  | sunbird_private_storage_account_name, sunbird_private_storage_account_key, | cloud_private_storage_accountname, cloud_private_storage_secret |
+| **Secor**                                  | secor_azure_container_name, sunbird_private_storage_account_key, sunbird_private_storage_account_name, azure_container_name,  | cloud_storage_telemetry_bucketname, cloud_private_storage_secret, cloud_private_storage_accountname, cloud_storage_telemetry_bucketname |
+| **Flink**                                  | sunbird_private_storage_account_name, sunbird_private_storage_account_key, checkpoint_store_type, sunbird_private_storage_account_name, sunbird_private_storage_account_key,   s3_access_key, s3_secret_key, s3_endpoint, s3_path_style_access| cloud_private_storage_accountname, cloud_private_storage_secret, cloud_service_provider, cloud_private_storage_endpoint, cloud_storage_pathstyle_access, cloud_private_storage_project |
+| **Druid**                                  | sunbird_private_storage_account_name, sunbird_private_storage_account_key,sunbird_druid_storage_account_name, sunbird_druid_storage_account_key, druid_azure_container_name, s3_storage_key, s3_storage_secret, s3_storage_container, s3_storage_endpoint,s3_path_style_access, s3_default_bucket_location,  | cloud_private_storage_accountname, cloud_private_storage_secret, cloud_storage_telemetry_bucketname,  cloud_storage_pathstyle_access, cloud_private_storage_project, cloud_private_storage_endpoint,cloud_private_storage_region, cloud_storage_telemetry_type |
+| **Sunbird Analytics Core**                                  | sunbird_private_storage_account_name, sunbird_private_storage_account_key, sunbird_public_storage_account_name, sunbird_public_storage_account_key | cloud_private_storage_accountname, cloud_private_storage_secret,  cloud_public_storage_accountname, cloud_public_storage_secret, cloud_storage_telemetry_type|
+
+
+
+
 
 
 
