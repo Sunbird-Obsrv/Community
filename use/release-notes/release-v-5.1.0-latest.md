@@ -26,7 +26,14 @@
 * Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
 * Obsrv Query Engine Deployment Script. [#OB-82](https://project-sunbird.atlassian.net/browse/OB-82)
 * Obsrv Query Engine API Implementation [#OB-51](https://project-sunbird.atlassian.net/browse/OB-88)
-
+* Merging of the release branches to main branch [#OB-244](https://project-sunbird.atlassian.net/browse/OB-244)
+* Obsrv HdInsight Cluster CSP Variable generalisation changes [#OB-232](https://project-sunbird.atlassian.net/browse/OB-232)
+* Obsrv Druid CSP Variable generalisation [#OB-226](https://project-sunbird.atlassian.net/browse/OB-226)
+* Obsrv Secor Service CSP Variable Generalisation [#OB-220](https://project-sunbird.atlassian.net/browse/OB-220)
+* Obsrv Report APIs CSP Variable Generalisation [#OB-214](https://project-sunbird.atlassian.net/browse/OB-214)
+* Obsrv Pipeline CSP Variable Generalisation [#OB-208](https://project-sunbird.atlassian.net/browse/OB-208)
+* Report API enhancement to generate the signed URL for the relative paths [#OB-202](https://project-sunbird.atlassian.net/browse/OB-202)
+* Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
 
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
