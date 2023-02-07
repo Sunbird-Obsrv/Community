@@ -4,6 +4,12 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 
 
 
+<mark style="color:orange;">**Release-5.1.0**</mark> <mark style="color:orange;"></mark><mark style="color:orange;"></mark> <mark style="color:orange;"></mark><mark style="color:orange;">**(Planned release date - 27 Mar '23)**</mark>
+
+[Click here](https://project-sunbird.atlassian.net/issues/?filter=12734) to see the list of issues planned for SB Obsrv release 5.2.0
+
+
+
 \
 <mark style="color:orange;">**Release-5.1.0**</mark> <mark style="color:orange;"></mark><mark style="color:orange;"></mark> <mark style="color:orange;"></mark><mark style="color:orange;">**(Planned release date - 04 Nov'22) - Projects**</mark>
 
