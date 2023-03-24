@@ -31,6 +31,7 @@
 
 #### **Sprint - 02**
 
+
 * [Deployment] Helm chart Creation for the APIs [#OB-386](https://project-sunbird.atlassian.net/browse/OB-386)
 
 * [Implementation] Datasource Update API [#OB-362](https://project-sunbird.atlassian.net/browse/OB-362)
@@ -44,6 +45,10 @@
 * [Implementation] Dataset Update API [#OB-313](https://project-sunbird.atlassian.net/browse/OB-313)
 
 * [Implementation] dataset create API [#OB-294](https://project-sunbird.atlassian.net/browse/OB-294)
+
+* [Open Source] Web console UI Design [#OB-374](https://project-sunbird.atlassian.net/browse/OB-374)
+
+* [Open Source] Web console UI Design Implementation [#OB-380](https://project-sunbird.atlassian.net/browse/OB-374)
 
 
 
