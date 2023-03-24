@@ -27,8 +27,6 @@
 
 * API implementation for Telemetry data specification configuration for a data source [#OB-118](https://project-sunbird.atlassian.net/browse/OB-118)
 
-* API implementation for Telemetry data specification configuration for a data source [#OB-118](https://project-sunbird.atlassian.net/browse/OB-118)
-
 #### **Sprint - 02**
 
 
