@@ -46,9 +46,9 @@
 
 * [Implementation] dataset create API [#OB-294](https://project-sunbird.atlassian.net/browse/OB-294)
 
-* Web console UI Design [#OB-374](https://project-sunbird.atlassian.net/browse/OB-374)
+* [Open Source] Web console UI Design [#OB-374](https://project-sunbird.atlassian.net/browse/OB-374)
 
-* Web console UI Design Implementation [#OB-380](https://project-sunbird.atlassian.net/browse/OB-374)
+* [Open Source] Web console UI Design Implementation [#OB-380](https://project-sunbird.atlassian.net/browse/OB-374)
 
 
 
