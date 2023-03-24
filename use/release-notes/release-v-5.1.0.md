@@ -20,15 +20,20 @@
 **Sprint 1**
 * Obsrv Infra single click installation in the local mode [#OB-27](https://project-sunbird.atlassian.net/browse/OB-27)
 * CSP Migration plan analysis [#OB-45](https://project-sunbird.atlassian.net/browse/OB-45)
-* Verification of the SDK Upgrade in the analytics [#OB-21](https://project-sunbird.atlassian.net/browse/OB-21)
 
 **Sprint 2**
-* Provision script changes to support any CSP [#OB-33](https://project-sunbird.atlassian.net/browse/OB-33)
 * Moving of all the repos into the obsrv community and deployment script changes. [#OB-39](https://project-sunbird.atlassian.net/browse/OB-39)
 * Obsrv infra single click installation bug fixes in the Kubernets cluster to setup the druid. [#OB-51](https://project-sunbird.atlassian.net/browse/OB-51)
 * Obsrv Query Engine Deployment Script. [#OB-82](https://project-sunbird.atlassian.net/browse/OB-82)
-* Obsrv Query Engine API Implementation [#OB-51](https://project-sunbird.atlassian.net/browse/OB-88)
-
+* Obsrv Query Engine API Implementation [#OB-88](https://project-sunbird.atlassian.net/browse/OB-88)
+* Merging of the release branches to main branch [#OB-244](https://project-sunbird.atlassian.net/browse/OB-244)
+* Obsrv HdInsight Cluster CSP Variable generalisation changes [#OB-232](https://project-sunbird.atlassian.net/browse/OB-232)
+* Obsrv Druid CSP Variable generalisation [#OB-226](https://project-sunbird.atlassian.net/browse/OB-226)
+* Obsrv Secor Service CSP Variable Generalisation [#OB-220](https://project-sunbird.atlassian.net/browse/OB-220)
+* Obsrv Report APIs CSP Variable Generalisation [#OB-214](https://project-sunbird.atlassian.net/browse/OB-214)
+* Obsrv Pipeline CSP Variable Generalisation [#OB-208](https://project-sunbird.atlassian.net/browse/OB-208)
+* Report API enhancement to generate the signed URL for the relative paths [#OB-202](https://project-sunbird.atlassian.net/browse/OB-202)
+* Obsrv stand alone spark machine provision script CSP variable generalisation [#OB-238](https://project-sunbird.atlassian.net/browse/OB-238)
 
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
