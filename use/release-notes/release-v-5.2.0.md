@@ -5,8 +5,6 @@
 ### **Features**
 
 #### **Sprint - 01**
-* CSP Changes - Variable Generalisation [#OB-45](https://project-sunbird.atlassian.net/browse/OB-45)
-
 * Helm Chart For Query API [#OB-350](https://project-sunbird.atlassian.net/browse/OB-350)
 * [Design] Datasource Update API [#OB-344](https://project-sunbird.atlassian.net/browse/OB-344)
 * [Design] Datasource Create API [#OB-338](https://project-sunbird.atlassian.net/browse/OB-338)
@@ -23,11 +21,13 @@
 
 * [Implementation] Data In API [#OB-288](https://project-sunbird.atlassian.net/browse/OB-288)
 
-* API implementation for Telemetry data specification configuration for a data source [#OB-188](https://project-sunbird.atlassian.net/browse/OB-188)
-
-* Design for configuration of telemetry data specification for a data source [#OB-122](https://project-sunbird.atlassian.net/browse/OB-122)
+* Design for configuration of telemetry data specification for a data source [#OB-112](https://project-sunbird.atlassian.net/browse/OB-112)
 
 * One click installation of Obsrv on AWS using Terraform [#OB-100](https://project-sunbird.atlassian.net/browse/OB-100)
+
+* API implementation for Telemetry data specification configuration for a data source [#OB-118](https://project-sunbird.atlassian.net/browse/OB-118)
+
+* API implementation for Telemetry data specification configuration for a data source [#OB-118](https://project-sunbird.atlassian.net/browse/OB-118)
 
 #### **Sprint - 02**
 
