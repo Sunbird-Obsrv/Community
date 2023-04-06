@@ -3,7 +3,7 @@
 ----------
 ### **Sprint - 01**
 #### **Functional** 
-* [Design] Connectors Desing Review [#OB-452](https://project-sunbird.atlassian.net/browse/OB-452)
+* [Design] Connectors Design Review [#OB-452](https://project-sunbird.atlassian.net/browse/OB-452)
 
 * [Implementation] Kafka Connector Implementation [#OB-458](https://project-sunbird.atlassian.net/browse/OB-458)
 

@@ -3,6 +3,14 @@
 
 ### **Features**
 
+### Functional
+
+* Generalisation of Obsrv core with domain agnostic
+* Data Ingestion Design and Implemenation 
+* Dataset CRUD API(s) Design and Implemenation
+* Datasource CRUD API(s) Design and Implemenation
+
+---
 #### **Sprint - 01**
 * Helm Chart For Query API [#OB-350](https://project-sunbird.atlassian.net/browse/OB-350)
 * [Design] Datasource Update API [#OB-344](https://project-sunbird.atlassian.net/browse/OB-344)
