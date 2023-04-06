@@ -23,8 +23,8 @@
 ## Use
 
 * [Release Notes](use/release-notes/README.md)
-  * [Release V 5.3.0 (Obsrv-2.0-GA)](use/release-notes/release-v-5.3.0-GA.md)
-  * [Release V 5.2.0 (Obsrv-2.0-Beta)](use/release-notes/release-v-5.2.0.md)
+  * [Release V 5.3.0 (Obsrv 2.0-GA)](use/release-notes/release-v-5.3.0-GA.md)
+  * [Release V 5.2.0 (Obsrv 2.0-Beta)](use/release-notes/release-v-5.2.0.md)
   * [Release V 5.1.0 ](use/release-notes/release-v-5.1.0.md)
   * [Release V 5.0.0](use/release-notes/release-v-5.0.0.md)
   * [Release V 4.10.0](use/release-notes/release-v-4.10.5.md)
