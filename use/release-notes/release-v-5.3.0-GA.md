@@ -5,11 +5,11 @@
 #### **Functional** 
 * [Design] Connectors Design Review [#OB-452](https://project-sunbird.atlassian.net/browse/OB-452)
 
-* [Implementation] Kafka Connector Implementation [#OB-458](https://project-sunbird.atlassian.net/browse/OB-458)
+* [Implementation] Kafka Connector  [#OB-458](https://project-sunbird.atlassian.net/browse/OB-458)
 
-* [Design] Design for Data connectors design for denormalization [#OB-190](https://project-sunbird.atlassian.net/browse/OB-190)
+* [Design] Denorm Connector [#OB-190](https://project-sunbird.atlassian.net/browse/OB-190)
 
-* [Implementation] Denorm Connector Implementation [#OB-464](https://project-sunbird.atlassian.net/browse/OB-464)
+* [Implementation] Denorm Connector  [#OB-464](https://project-sunbird.atlassian.net/browse/OB-464)
 
 * [Design] CRUD API's for Datasource Config and Dataset transformation [#OB-428](https://project-sunbird.atlassian.net/browse/OB-428)
 
