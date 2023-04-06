@@ -1,5 +1,4 @@
-### <mark style="color:blue;">5.2.0</mark>
-
+### <mark style="color:blue;">Obsrv 2.0 Beta Release (Release 5.2.0-Beta)</mark>
 
 
 ### **Features**
@@ -44,9 +43,6 @@
 
 * [Implementation] dataset create API [#OB-294](https://project-sunbird.atlassian.net/browse/OB-294)
 
-* [Open Source] Web console UI Design [#OB-374](https://project-sunbird.atlassian.net/browse/OB-374)
-
-* [Open Source] Web console UI Design Implementation [#OB-380](https://project-sunbird.atlassian.net/browse/OB-374)
 
 
 
