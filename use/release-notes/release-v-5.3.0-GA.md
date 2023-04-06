@@ -1,11 +1,7 @@
 # <mark style="color:blue;">Obsrv 2.0 GA Release (Release 5.3.0-GA)</mark>
-
 ## **Features**
-
 ----------
 ### **Sprint - 01**
-
-
 #### **Functional** 
 * [Design] Connectors Desing Review [#OB-452](https://project-sunbird.atlassian.net/browse/OB-452)
 
