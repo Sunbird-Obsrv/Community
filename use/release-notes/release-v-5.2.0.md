@@ -9,6 +9,8 @@
 * Data Ingestion Design and Implemenation 
 * Dataset CRUD API(s) Design and Implemenation
 * Datasource CRUD API(s) Design and Implemenation
+* Automation Script for both build and deployment
+
 
 ---
 #### **Sprint - 01**
