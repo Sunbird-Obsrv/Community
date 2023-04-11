@@ -1,7 +1,6 @@
-# <mark style="color:blue;">Obsrv 2.0 GA Release (Release 5.3.0-GA)</mark>
+# <mark style="color:blue;">Obsrv 2.0 GA Release/mark>
 ## **Features**
 ----------
-### **Sprint - 01**
 #### **Functional** 
 * [Design] Connectors Design Review [#OB-452](https://project-sunbird.atlassian.net/browse/OB-452)
 
@@ -30,19 +29,6 @@
 
 * [Devops] Alert configurations for various Functional alerts [#OB-446](https://project-sunbird.atlassian.net/browse/OB-446)
 
-#### **Quality** 
-
-* [Testing] End to End testing of obsrv 2.0 with multiple datasets [#OB-470](https://project-sunbird.atlassian.net/browse/OB-470)
-
-* [Unit Tests] Improving the code coverage for `/datasources/save` API(s) [#OB-500](https://project-sunbird.atlassian.net/browse/OB-500)
-
-* [Unit Tests] Improving the code coverage of Datasource Config and Dataset transformation APIs [#OB-506](https://project-sunbird.atlassian.net/browse/OB-506)
-
-----------
-### **Sprint - 02**
-
-#### **Devops** 
-
 * [Devops] Github Actions (Build and Deployment Script for the Connectors) [#OB-488](https://project-sunbird.atlassian.net/browse/OB-488)
 
 * [Upgrade] Update Lern and Knowlg building blocks to use the Telemetry API instead of directly pushing data into Kafka [#OB-440](https://project-sunbird.atlassian.net/browse/OB-440)
@@ -54,17 +40,30 @@
 * [Devops] Integration of build and deployment using Jenkins for Sunbird deployments [#OB-398](https://project-sunbird.atlassian.net/browse/OB-398)
 
 
+#### **Quality** 
+
+* [Testing] End to End testing of obsrv 2.0 with multiple datasets [#OB-470](https://project-sunbird.atlassian.net/browse/OB-470)
+
+* [Unit Tests] Improving the code coverage for `/datasources/save` API(s) [#OB-500](https://project-sunbird.atlassian.net/browse/OB-500)
+
+* [Unit Tests] Improving the code coverage of Datasource Config and Dataset transformation APIs [#OB-506](https://project-sunbird.atlassian.net/browse/OB-506)
+
+* [Unit Tests] Kafka Connector Code Coverage Improvment [#OB-512"](https://project-sunbird.atlassian.net/browse/OB-512)
+
+* [Unit Tests] Denorm Connector Code Coverage Improvment [#OB-518"](https://project-sunbird.atlassian.net/browse/OB-518)
+
 #### **Documentations**
 
 * [Documentation] APIs Swagger Documentation Update [#OB-94](https://project-sunbird.atlassian.net/browse/OB-94)
 
 * [Documentation] Obsrv 2.0 Migration Documentation   [#OB-494](https://project-sunbird.atlassian.net/browse/OB-494)
 
-#### **Quality** 
+#### Pefromance Benchamrk
 
-* [Unit Tests] Kafka Connector Code Coverage Improvment [#OB-512"](https://project-sunbird.atlassian.net/browse/OB-512)
+* [Benchamrk] Obsrv 2.0 Components Benchmark   [#OB-494](https://project-sunbird.atlassian.net/browse/OB-494)
 
-* [Unit Tests] Denorm Connector Code Coverage Improvment [#OB-518"](https://project-sunbird.atlassian.net/browse/OB-518)
+
+
 
 
 
