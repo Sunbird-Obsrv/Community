@@ -1,19 +1,74 @@
 # Product Roadmap
 
+Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, processing and querying of the telemetry data to be agnostic of the data specification of the telemetry data. The last stable release of Sunbird Obsrv 1.0, which is tightly coupled of the [Sunbird Telemetry](https://telemetry.sunbird.org/) Specification will be [Release 5.1.1](../use/release-notes/release-v-5.1.0.md). The product roadmap for Sunbird Obsrv 2.0 has been detailed out below with the features being logically grouped under specific functional features.
+
 Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
 
+<mark style="color:orange;">**Obsrv 2.1.0 Release date - 30th Nov'23**</mark>
+
+<mark style="color:orange;">**360 degree observability**</mark>
+
+1. Ability to run batch jobs
+2. Support CSV and other popular data formats
+
+<mark style="color:orange;">**Simplified Operations**</mark>
+
+1. One-click installation for OCI
+
+<mark style="color:orange;">**Connector Ecosystem**</mark>
+
+1. Object Storage Connectors - cloud storages&#x20;
+2. MinIO connector
 
 
-<mark style="color:orange;">**Release-5.2.0**</mark> <mark style="color:orange;"></mark><mark style="color:orange;"></mark> <mark style="color:orange;"></mark><mark style="color:orange;">**(Planned release date - 27 Mar '23)**</mark>
 
-[Click here](https://project-sunbird.atlassian.net/issues/?filter=12734) to see the list of issues planned for SB Obsrv release 5.2.0
+<mark style="color:orange;">**Obsrv 2.1.0 Release date - 31st Aug'23**</mark>
+
+<mark style="color:orange;">**360 degree observability**</mark>
+
+1. Data Management - Data Retention & Archival Policies
+2. Post Aggregate Functions
+3. Data Exhausts
+
+<mark style="color:orange;">**Simplified Operations**</mark>
+
+1. Multi-channel alerts (slack, email, sms)
+
+<mark style="color:orange;">**Connector Ecosystem**</mark>
+
+1. Connector Marketplace/Framework&#x20;
+2. Postgresql Connector for data & denormalization
 
 
+
+<mark style="color:orange;">**Obsrv 2.0.0 GA (Planned release date - 2 May'23)**</mark>
+
+<mark style="color:orange;">**360 degree observability**</mark>
+
+1. Data Set Creation via APIs
+2. Data Denormalization with API & Push to Kafka
+3. Real time querying
+4. Druid SQL & JSON query interface
+5. Out-of-the-box visualizations with Superset
+
+<mark style="color:orange;">**Simplified Operations**</mark>
+
+1. One-click installation for AWS, Azure & GCP&#x20;
+2. Standard Monitoring Capability&#x20;
+3. Log Streaming with Grafana UI
+
+<mark style="color:orange;">**Connector Ecosystem**</mark>
+
+1. Kafka connector for data & denormalization
+
+<mark style="color:orange;">**Unified Web Console**</mark>
+
+1. General Cluster metrics
 
 \
-<mark style="color:orange;">**Release-5.1.0**</mark> <mark style="color:orange;"></mark><mark style="color:orange;"></mark> <mark style="color:orange;"></mark><mark style="color:orange;">**(Planned release date - 04 Nov'22) - Projects**</mark>
+<mark style="color:orange;">**Release-5.1.0**</mark> <mark style="color:orange;">**(Planned release date - 04 Nov'22) - Projects**</mark>
 
-<mark style="color:orange;">****</mark>
+
 
 <mark style="color:orange;">**Project : Enabling ease of adoption**</mark>
 
@@ -23,7 +78,7 @@ a. Include the data products (work flow summary) as part of the one-click instal
 
 b. Include a sample data set and some pre-configured charts as part of the one-click installer package so that an adopter trying it out can get a feel of the types of charts that can be generated, and the kind of data required to be generated for this purpose.
 
-&#x20;<mark style="color:orange;">****</mark>&#x20;
+&#x20;
 
 <mark style="color:orange;">**Project: Enabling ease of adoption**</mark>&#x20;
 
@@ -31,7 +86,7 @@ b. Include a sample data set and some pre-configured charts as part of the one-c
 
 Additional pending Sunbird Obsrv documentation work
 
-****
+
 
 <mark style="color:orange;">**Project: Enabling ease of adoption**</mark>
 
@@ -39,11 +94,11 @@ Additional pending Sunbird Obsrv documentation work
 
 Compile existing learning resources/ create new resources in order to put together a learning module/ course that will allow a developer to get familiar with the Obsrv building block, and potentially get "Obsrv certified" by earning a certificate after taking an assessment.&#x20;
 
-<mark style="color:green;">****</mark>
 
-<mark style="color:green;">****</mark>
 
-<mark style="color:green;">****</mark>
+
+
+
 
 <mark style="color:green;">**4.10.0 :**</mark> Planned for 06 Jun '22
 
@@ -60,6 +115,6 @@ Compile existing learning resources/ create new resources in order to put togeth
 | <p><strong>4. Multi-cloud support for blob store:</strong> <mark style="color:green;"><strong>5.0.0</strong></mark></p><p>Update the framework, cloud-storage sdk, Secor and Flink checkpoints to work with GCP as well- Generalize the analytics framework, cloud-storage-sdk, Secor and Flink checkpoints to work with AWS S3, Azure Blob Storage and Google Cloud Storage- Add relevant configuration files required for the generalization<br></p>                                                                                                       |
 | - Be able to deploy existing microservices into a different namespace (SB Ed)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ****[**Sunbird Obsrv Backlog >**](https://project-sunbird.atlassian.net/issues/?filter=12538)****                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [**Sunbird Obsrv Backlog >**](https://project-sunbird.atlassian.net/issues/?filter=12538)                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | <p><strong>1. Documentation to configure data exhaust reports using the APIs:</strong> Detailed explanation of the different sections of the configuration schema.</p><p>- Add documentation to explain the configuration schema for the various data exhaust report API</p><p>- Add detailed documentation on the usage of the APIs</p>                                                                                                                                                                                                                     |
 | <p><br></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
