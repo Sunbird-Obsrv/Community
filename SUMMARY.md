@@ -30,6 +30,7 @@
   * [Release V 4.10.0](use/release-notes/release-v-4.10.5.md)
 * [Release Calendar](use/release-calendar.md)
 * [Installation Guide](use/installation-guide.md)
+* [Obsrv 2.0 Installation Guide](use/obsrv-2.0-installation-guide.md)
 * [System Requirements](use/system-requirements.md)
 
 ***
