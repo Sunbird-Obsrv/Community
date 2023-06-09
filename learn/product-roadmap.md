@@ -41,7 +41,7 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 
 
 
-<mark style="color:orange;">**Obsrv 2.0.0 GA (Planned release date - 2 May'23)**</mark>
+<mark style="color:orange;">**[Obsrv 2.0.0 GA](<../../use/release-notes/release-v-5.3.0-GA.md>)(Planned release date - 2 May'23)**</mark>
 
 <mark style="color:orange;">**360 degree observability**</mark>
 
@@ -66,7 +66,7 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 1. General Cluster metrics
 
 \
-<mark style="color:orange;">**Release-5.1.0**</mark> <mark style="color:orange;">**(Planned release date - 04 Nov'22) - Projects**</mark>
+<mark style="color:orange;">**[Release-5.1.0](<../../use/release-notes/release-v-5.1.0.md>)**</mark> <mark style="color:orange;">**(Planned release date - 04 Nov'22) - Projects**</mark>
 
 
 
