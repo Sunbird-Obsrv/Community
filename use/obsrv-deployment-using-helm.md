@@ -16,7 +16,7 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-1. Run the following `helm repo add` command to download the required dependencies for running Obsrv.
+2. Run the following `helm repo add` command to download the required dependencies for running Obsrv.
     
     ```powershell
     helm repo add <repo_name> <repo_url>
@@ -28,7 +28,7 @@ chmod 700 get_helm.sh
     - loki - `https://grafana.github.io/helm-charts`
     - promtail - `https://grafana.github.io/helm-charts`
     - velero -  `https://vmware-tanzu.github.io/helm-chart`
-2. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
+3. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
 
 ### **Deployment Instructions**
 
@@ -61,14 +61,14 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```
     
 5. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load
-    1. **Druid Operator**
+    a. **Druid Operator**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic druid-operator druid_operator/druid-operator-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    2. **Druid Exporter**
+    b. **Druid Exporter**
         - Install Command:
         
         ```powershell
@@ -83,14 +83,14 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```
     
 7. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
-    1. **Streaming Jobs**
+    a. **Streaming Jobs**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic merged-pipeline flink/flink-helm-chart -n flink --set image.registry=sunbird --set image.repository=sb-obsrv-merged-pipeline --create-namespace --debug
         ```
         
-    2. **Flink Master Data Processor:**
+    b. **Flink Master Data Processor:**
         - Install Command
         
         ```powershell
@@ -107,14 +107,14 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```
     
 8. **Secor Backup Process:**
-    1. **Service account**
+    a. **Service account**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic secor-sa secor/secor-helm-chart-sa -n secor --create-namespace --debug
         ```
         
-    2. **Backup Process**
+    b. **Backup Process**
         - Install Command:
         
         ```powershell
@@ -122,64 +122,64 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
 
-1. **Monitoring stack:**
-    1. **Promethes**
+9. **Monitoring stack:**
+    a. **Promethes**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic monitoring prometheus/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
         ```
         
-    2. **Grafana Configs**
+    b. **Grafana Configs**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic grafana-configs grafana_configs/grafana-configs-helm-chart -n monitoring --create-namespace --debug
         ```
         
-    3. **Alert Rules**
+    c. **Alert Rules**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic alertrules alert_rules/alert-rules-helm-chart -n monitoring --create-namespace --debug
         ```
         
-    4. **Druid Exporter**
+    d. **Druid Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic druid-exporter druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    5. **Kafka Exporter**
+    e. **Kafka Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic kafka-exporter kafka_exporter/kafka-exporter-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    6. **Postgres Exporter**
+    f. **Postgres Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic kafka-exporter postgresql_exporter/kafka-exporter-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    7. **Velero**
+    g. **Velero**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug
         ```
         
-    8. **Loki**
+    h. **Loki**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic loki loki/loki -n monitoring -f loki/values.yaml --create-namespace --debug
         ```
         
-    9. **Promtail**
+    i. **Promtail**
         - Install Command:
         
         ```powershell
