@@ -31,6 +31,7 @@
 * [Release Calendar](use/release-calendar.md)
 * [Installation Guide](use/installation-guide.md)
 * [Obsrv 2.0 Installation Guide](use/obsrv-2.0-installation-guide.md)
+  * [Obsrv 2.0 Deployment Using Helm](use/obsrv-deployment-using-helm.md)
 * [System Requirements](use/system-requirements.md)
 
 ***
