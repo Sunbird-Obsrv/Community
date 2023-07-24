@@ -68,18 +68,18 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         helm upgrade --install --atomic druid-operator druid_operator/druid-operator-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    2. **Druid Exporter**
+    2. **Druid Cluster**
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic druid-exporter druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug
+        helm upgrade --install --atomic druid-cluster druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug
         ```
         
 6. **API:** This service enables CRUD operations on the dataset and data source levels.
     - Install command:
     
     ```powershell
-    helm upgrade --install --atomic druid-exporter druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug 
+    helm upgrade --install --atomic druid-exporter druid_raw_cluster/druid-raw-cluster-helm-chart -n druid-raw --create-namespace --debug 
     ```
     
 7. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
