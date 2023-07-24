@@ -90,14 +90,14 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```powershell
     helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
     ```
-    2. **Streaming Jobs**
+    2. **Flink Merged Pipeline Job:**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic merged-pipeline flink/flink-helm-chart -n flink --set image.registry=sunbird --set image.repository=sb-obsrv-merged-pipeline --create-namespace --debug
         ```
         
-    3. **Flink Master Data Processor:**
+    3. **Flink Master Data Processor Job:**
         - Install Command
         
         ```powershell
