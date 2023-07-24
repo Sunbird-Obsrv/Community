@@ -79,7 +79,7 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     - Install command:
     
     ```powershell
-    helm upgrade --install --atomic dataset-api dataset-api/dataset-api-helm-chart -n druid-raw --create-namespace --debug 
+    helm upgrade --install --atomic dataset-api dataset_api/dataset-api-helm-chart -n druid-raw --create-namespace --debug 
     ```
     
 7. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
