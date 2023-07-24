@@ -169,21 +169,21 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug --version 3.1.6
         ```
         
     8. **Loki**
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic loki loki/loki -n monitoring -f loki/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic loki loki/loki -n loki -f loki/values.yaml --create-namespace --debug --version 4.8.0
         ```
         
     9. **Promtail**
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic promtail promtail/promtail -n monitoring -f promtail/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic promtail promtail/promtail -n monitoring -f promtail/values.yaml --create-namespace --debug --version 6.9.3
         ```
         
 
