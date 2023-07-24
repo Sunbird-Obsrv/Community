@@ -25,9 +25,9 @@ chmod 700 get_helm.sh
     
     - prometheus - `https://prometheus-community.github.io/helm-charts`
     - redis - `https://charts.bitnami.com/bitnami`
-    - loki - `https://grafana.github.io/helm-charts`
-    - promtail - `https://grafana.github.io/helm-charts`
-    - velero -  `https://vmware-tanzu.github.io/helm-chart`
+    - loki (version - 4.8.0 ) - `https://grafana.github.io/helm-charts`
+    - promtail (version - 6.9.3 ) - `https://grafana.github.io/helm-charts`
+    - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-chart`
 3. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
 
 ### **Deployment Instructions**
@@ -169,21 +169,21 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug --version 3.1.6
         ```
         
     8. **Loki**
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic loki loki/loki -n monitoring -f loki/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic loki loki/loki -n loki -f loki/values.yaml --create-namespace --debug --version 4.8.0
         ```
         
     9. **Promtail**
         - Install Command:
         
         ```powershell
-        helm upgrade --install --atomic promtail promtail/promtail -n monitoring -f promtail/values.yaml --create-namespace --debug
+        helm upgrade --install --atomic promtail promtail/promtail -n monitoring -f promtail/values.yaml --create-namespace --debug --version 6.9.3
         ```
         
 
