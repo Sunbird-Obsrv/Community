@@ -185,7 +185,12 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```powershell
         helm upgrade --install --atomic promtail promtail/promtail -n monitoring -f promtail/values.yaml --create-namespace --debug --version 6.9.3
         ```
-        
+10. **Ingestion:** This service submits ingestion to druid.
+    - Install command:
+    
+    ```powershell
+    helm upgrade --install --atomic submit-ingestion submit_ingestion/submit-ingestion-helm-chart -n submit-ingestion --create-namespace --debug 
+    ```
 
 ### **Conclusion**
 
