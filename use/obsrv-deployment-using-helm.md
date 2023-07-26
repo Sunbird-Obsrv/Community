@@ -23,7 +23,7 @@ chmod 700 get_helm.sh
     ex :- helm repo add prometheus https://prometheus-community.github.io/helm-charts
     ```
     
-    - prometheus - `https://prometheus-community.github.io/helm-charts`
+    - monitoring - `https://prometheus-community.github.io/helm-charts`
     - redis - `https://charts.bitnami.com/bitnami`
     - loki (version - 4.8.0 ) - `https://grafana.github.io/helm-charts`
     - promtail (version - 6.9.3 ) - `https://grafana.github.io/helm-charts`
