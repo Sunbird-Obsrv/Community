@@ -8,7 +8,11 @@ If you're looking to get started with Obsrv 2.0, there are a few prerequisites t
 
 Before deploying Obsrv ensure you have a running Kubernetes cluster.
 
-1. Install helm 
+1. Hardware Specifications
+
+For smooth operation of the obsrv system, a minimum of 16 CPU cores and 32 GB of RAM is required to handle the processing of 10 to 15 million events per day.
+
+2. Install helm 
 
 ```powershell
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
@@ -16,7 +20,7 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-2. Run the following `helm repo add` command to download the required dependencies for running Obsrv.
+3. Run the following `helm repo add` command to download the required dependencies for running Obsrv.
     
     ```powershell
     helm repo add <repo_name> <repo_url>
@@ -28,7 +32,7 @@ chmod 700 get_helm.sh
     - loki (version - 4.8.0 ) - `https://grafana.github.io/helm-charts`
     - promtail (version - 6.9.3 ) - `https://grafana.github.io/helm-charts`
     - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-charts`
-3. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
+4. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
 
 ### **Deployment Instructions**
 
@@ -85,11 +89,11 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
 7. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
     1. **Service account**
     
-    - Install Command:
+        - Install Command:
     
-    ```powershell
-    helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
-    ```
+        ```powershell
+        helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
+        ```
     2. **Flink Merged Pipeline Job:**
         - Install Command:
         
