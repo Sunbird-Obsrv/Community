@@ -10,7 +10,7 @@ Before deploying Obsrv ensure you have a running Kubernetes cluster.
 
 1. Hardware Specifications
 
-For smooth operation of the obsrv system, a minimum of 16 CPU cores and 32 GB of RAM is required to handle the processing of 10 to 15 million events per day.
+For smooth operation of the obsrv system, a minimum of 16 CPU cores and 64 GB of RAM is required to handle the processing of 10 to 15 million events per day.
 
 2. Install helm 
 
