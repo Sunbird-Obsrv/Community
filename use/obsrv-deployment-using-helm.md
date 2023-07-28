@@ -104,15 +104,21 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```powershell
     helm upgrade --install --atomic redis redis/redis -n redis -f redis/values.yaml --create-namespace --debug
     ```
+4. **Prometheus**
+        - Install Command:
+        
+        ```powershell
+        helm upgrade --install --atomic monitoring monitoring/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
+        ```
     
-4. **Kafka:** Kafka is a distributed event store and stream-processing platform. Use the following commands to deploy Kafka:
+5. **Kafka:** Kafka is a distributed event store and stream-processing platform. Use the following commands to deploy Kafka:
     - Install Command:
     
     ```powershell
     helm upgrade --install --atomic kafka kafka/kafka-helm-chart -n kafka --create-namespace --debug
     ```
     
-5. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load
+6. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load
     1. **Druid Operator**
         - Install Command:
         
@@ -127,14 +133,14 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         helm upgrade --install --atomic druid-cluster druid_raw_cluster/druid-raw-cluster-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-6. **API:** This service enables CRUD operations on the dataset and data source levels.
+7. **API:** This service enables CRUD operations on the dataset and data source levels.
     - Install command:
     
     ```powershell
     helm upgrade --install --atomic dataset-api dataset_api/dataset-api-helm-chart -n dataset-api --create-namespace --debug 
     ```
     
-7. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
+8. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
     1. **Service account**
     
         - Install Command:
@@ -156,7 +162,7 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         helm upgrade --install --atomic master-data-processor flink/flink-helm-chart -n flink --set image.registry=sunbird --set image.repository=sb-obsrv-master-data-processor --create-namespace --debug
         ```
     
-8. **Secor Backup Process:**
+9. **Secor Backup Process:**
     1. **Service account**
         - Install Command:
         
@@ -172,70 +178,64 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
 
-9. **Monitoring stack:**
-    1. **Prometheus**
-        - Install Command:
+10. **Monitoring Services:**
         
-        ```powershell
-        helm upgrade --install --atomic monitoring monitoring/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
-        ```
-        
-    2. **Grafana Configs**
+    1. **Grafana Configs**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic grafana-configs grafana_configs/grafana-configs-helm-chart -n monitoring --create-namespace --debug
         ```
         
-    3. **Alert Rules**
+    2. **Alert Rules**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic alertrules alert_rules/alert-rules-helm-chart -n monitoring --create-namespace --debug
         ```
         
-    4. **Druid Exporter**
+    3. **Druid Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic druid-exporter druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug
         ```
         
-    5. **Kafka Exporter**
+    4. **Kafka Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic kafka-exporter kafka_exporter/kafka-exporter-helm-chart -n kafka --create-namespace --debug
         ```
         
-    6. **Postgres Exporter**
+    5. **Postgres Exporter**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic postgresql-exporter postgresql_exporter/postgresql-exporter-helm-chart -n postgresql --create-namespace --debug
         ```
         
-    7. **Velero**
+    6. **Velero**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug --version 3.1.6
         ```
         
-    8. **Loki**
+    7. **Loki**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic loki loki/loki -n loki -f loki/values.yaml --create-namespace --debug --version 4.8.0
         ```
         
-    9. **Promtail**
+    8. **Promtail**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic promtail promtail/promtail -n loki -f promtail/values.yaml --create-namespace --debug --version 6.9.3
         ```
-10. **Ingestion:** This service submits ingestion to druid.
+11. **Ingestion:** This service submits ingestion to druid.
     - Install command:
     
     ```powershell
