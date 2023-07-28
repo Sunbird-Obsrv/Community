@@ -33,6 +33,54 @@ chmod 700 get_helm.sh
     - promtail (version - 6.9.3 ) - `https://grafana.github.io/helm-charts`
     - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-charts`
 4. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
+5. Create the following resources
+    - Service account for Api, Druid, Flink, Secor.
+    - IAM role for Api, Druid, Flink, Secor with `AmazonS3FullAccess` policy.
+    - User for velero and generate credentials
+    - IAM role for velero user with the below policy
+        ```{
+            "Statement": [
+                {
+                    "Action": [
+                        "ec2:DescribeVolumes",
+                        "ec2:DescribeSnapshots",
+                        "ec2:CreateTags",
+                        "ec2:CreateVolume",
+                        "ec2:CreateSnapshot",
+                        "ec2:DeleteSnapshot"
+                    ],
+                    "Effect": "Allow",
+                    "Resource": "*"
+                },
+                {
+                    "Action": [
+                        "s3:GetObject",
+                        "s3:DeleteObject",
+                        "s3:PutObject",
+                        "s3:AbortMultipartUpload",
+                        "s3:ListMultipartUploadParts"
+                    ],
+                    "Effect": "Allow",
+                    "Resource": [
+                        "arn:aws:s3:::<velero-s3-container-name>/*"
+                    ]
+                },
+                {
+                    "Action": [
+                        "s3:ListBucket"
+                    ],
+                    "Effect": "Allow",
+                    "Resource": [
+                        "arn:aws:s3:::<velero-s3-container-name>"
+                    ]
+                }
+            ],
+            "Version": "2012-10-17"
+        }```
+    - Following 3 s3 buckets to be created 
+        - Api,Druid,Secor
+        - Flink
+        - Velero
 
 ### **Deployment Instructions**
 
