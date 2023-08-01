@@ -77,7 +77,7 @@ chmod 700 get_helm.sh
             ],
             "Version": "2012-10-17"
         }```
-    - Following 3 s3 buckets to be created 
+    - Following three s3 buckets to be created 
         - Api,Druid,Secor
         - Flink
         - Velero
