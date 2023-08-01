@@ -102,7 +102,7 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     - Install Command:
     
     ```powershell
-    helm upgrade --install --atomic redis redis/redis -n redis -f redis/values.yaml --create-namespace --debug
+    helm upgrade --install --atomic obsrv-redis redis/redis -n redis -f redis/values.yaml --create-namespace --debug
     ```
 4. **Prometheus**
     - Install Command:
