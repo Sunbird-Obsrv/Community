@@ -105,11 +105,11 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     helm upgrade --install --atomic redis redis/redis -n redis -f redis/values.yaml --create-namespace --debug
     ```
 4. **Prometheus**
-        - Install Command:
-        
-        ```powershell
-        helm upgrade --install --atomic monitoring monitoring/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
-        ```
+    - Install Command:
+    
+    ```powershell
+    helm upgrade --install --atomic monitoring monitoring/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
+    ```
     
 5. **Kafka:** Kafka is a distributed event store and stream-processing platform. Use the following commands to deploy Kafka:
     - Install Command:
@@ -241,6 +241,20 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```powershell
     helm upgrade --install --atomic submit-ingestion submit_ingestion/submit-ingestion-helm-chart -n submit-ingestion --create-namespace --debug 
     ```
+12. **Visualization:** This service is used to visualize all the data
+    1. **Superset**
+        - Install command:
+
+        ```powershell
+        helm upgrade --install --atomic superset superset/superset-helm-chart -n superset --create-namespace --debug
+        ```
+    2. **Webconsole**
+        - Install command:
+
+        ```powershell
+        helm upgrade --install --atomic web-console web_console/web-console-helm-chart -n web-console --create-namespace --debug
+        ```
+
 
 ### **Conclusion**
 
