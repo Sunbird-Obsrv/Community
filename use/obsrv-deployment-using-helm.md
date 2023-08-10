@@ -142,13 +142,13 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     
 8. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
     1. **Service account**
-    
         - Install Command:
     
         ```powershell
         helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
         ```
-    2. **Flink Merged Pipeline Job:**
+    2. **Flink Merged Pipeline Job:**  Properties checklist for different cloud providers
+        1. **AWS S3/MinIO/Ceph:** 
         - Install Command:
         
         ```powershell
