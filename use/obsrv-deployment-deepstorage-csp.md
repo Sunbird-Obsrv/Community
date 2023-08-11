@@ -1,7 +1,7 @@
 **Druid:**
 | AWS 	| MinIO 	| AZURE 	| GCP 	|
 |---	|---	|---	|---	|
-| `druid_deepstorage_type: "s3"` <br>`s3_access_key: ""`<br>`s3_secret_key: ""`<br>`s3_bucket: "”`<br>`druid_indexer_logs_prefix:""` 	| `druid_s3_endpoint_url:""`<br>`druid_storage_baseKey:""`<br>`s3_access_key: ""`<br>`s3_secret_key: ""`<br>`s3_bucket: "”`<br>`druid_s3_endpoint_signingRegion:””`<br>`druid_indexer_logs_directory:””` 	| `azure_storage_account_name:""`<br>`azure_storage_account_key:””`<br>`azure_storage_container:””` 	| `gcs_bucket:""` 	|
+| `druid_deepstorage_type: "s3"` <br>`s3_access_key: ""`<br>`s3_secret_key: ""`<br>`s3_bucket: "”`<br>`druid_indexer_logs_prefix:""` 	| `druid_s3_endpoint_url:""`<br>`druid_storage_baseKey:""`<br>`s3_access_key: ""`<br>`s3_secret_key: ""`<br>`s3_bucket: "”`<br>`druid_s3_endpoint_signingRegion:””`<br>`druid_indexer_logs_directory:””` 	| `azure_storage_account_name:""`<br>`azure_storage_account_key:””`<br>`azure_storage_container:””` 	| `gcs_bucket:""`<br>`google_application_credentials:""` 	|
 
 **Flink:**
 | AWS 	| MinIO 	| AZURE 	| GCP 	|

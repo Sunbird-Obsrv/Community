@@ -119,6 +119,7 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     ```
     
 6. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load
+    - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
     1. **Druid Operator**
         - Install Command:
         
@@ -147,8 +148,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```powershell
         helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
         ```
-    2. **Flink Merged Pipeline Job:**  Properties checklist for different cloud providers
-        1. **AWS S3/MinIO/Ceph:** 
+    2. **Flink Merged Pipeline Job:**     
+        - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
         - Install Command:
         
         ```powershell
@@ -171,6 +172,7 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     2. **Backup Process**
+        - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
         - Install Command:
         
         ```powershell
