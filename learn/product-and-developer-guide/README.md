@@ -16,6 +16,6 @@ Sunbird Obsrv is a combination of various tools which provide the capabilities s
 
 ![High Level Sunbird Obsrv Component Overview](<../../.gitbook/assets/Component_View.png>)
 
-![Data analytics architecture](<../../.gitbook/assets/Deployment_view.png>)	
+![Data analytics architecture](<../../.gitbook/assets/DataPipeline BB HighLevel Diagram.png>)	
 
 
