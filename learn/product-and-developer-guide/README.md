@@ -12,7 +12,9 @@ The telemetry event data is then synced to a configurable analytic data store to
 
 Sunbird Obsrv is a combination of various tools which provide the capabilities such as streaming, processing and storage of telemetry data and deriving reporting insights from the data.
 
-![Data analytics architecture](<../../.gitbook/assets/sunbird_obsrv_1.0.png>)
+![L0 Sunbird Obsrv Component View](<../../.gitbook/assets/L0_View.png>)
+
+![High Level Sunbird Obsrv Component Overview](<../../.gitbook/assets/Component_View.png>)
 
 ![Data analytics architecture](<../../.gitbook/assets/Deployment_view.png>)	
 
