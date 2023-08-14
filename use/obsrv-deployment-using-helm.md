@@ -256,7 +256,22 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```powershell
         helm upgrade --install --atomic web-console web_console/web-console-helm-chart -n web-console --create-namespace --debug
         ```
+13. **Loadbalancers:** Below is the list of services  
 
+| Service       	| Loadbalancer (Required/Optional)  	| Description                                                                                                                                                                      	|
+|---------------	|---------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Postgres      	| `Optional`      	| It is a database which need not be exposed.                                                                                                                                      	|
+| Redis         	| `Optional`      	| It is a cache service which need not be exposed.                                                                                                                                 	|
+| Prometheus    	| `Optional`      	| It is a monitoring service which need not be exposed.                                                                                                                            	|
+| Kafka         	| `Optional`      	| It is a queue service which need not be exposed.                                                                                                                                 	|
+| Druid         	| `Optional`      	| It is a analytical tool which need not be exposed.                                                                                                                               	|
+| API           	| **Required** 	| It is the entry point of the data in so it needs to be exposed as a loadbalancer.                                                                                                	|
+| Pipeline Jobs 	| `Optional`      	| It is a job which process data so it need not be exposed.                                                                                                                        	|
+| Backups       	| `Optional`      	| It is backup service which need not be exposed.                                                                                                                                  	|
+| Exporters     	| `Optional`      	| It is a exporter service which send metrics to prometheus from respective applications for ex: postgres-exporter,druid-exporter,kafka-exporter. This doesn't need to be exposed. 	|
+| Ingestion     	| `Optional`      	| It is a service which submits ingestion for analytical tool. This doesn't need to be exposed.                                                                                    	|
+| Superset      	| **Required** 	| It is one of the visualization tool which needs to be exposed.                                                                                                                   	|
+| Web console   	| **Required** 	| It is a visualization tool which need to be exposed.                                                                                                                             	|
 
 ### **Conclusion**
 
