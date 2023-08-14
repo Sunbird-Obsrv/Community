@@ -2,8 +2,8 @@
 |  	| Key 	| Value 	| Description 	|
 |---	|---	|---	|---	|
 | AWS 	| druid_deepstorage_type 	| S3 	| Deepstorage type where the needs to be pushed. 	|
-| AWS	| s3_access_key 	| "" 	| Access key to access the bucket. 	|
-| AWS 	| s3_secret_key 	| "" 	| Secret key to access the bucket. 	|
+| ^^	| s3_access_key 	| "" 	| Access key to access the bucket. 	|
+| ^^ 	| s3_secret_key 	| "" 	| Secret key to access the bucket. 	|
 | AWS 	| druid_indexer_logs_prefix 	| "backups/druid/druid-task-logs" 	| Path inside the bucket where we wanted to store indexer logs. 	|
 | AWS 	| druid_storage_baseKey 	| "druid/segments" 	| Path inside the bucket where all the segments are stored.  	|
 | MinIO 	| druid_deepstorage_type 	| S3 	| Deepstorage type where the needs to be pushed. 	|
@@ -22,23 +22,23 @@
 | GCP 	| druid_storage_baseKey 	| "druid/segments" 	| Path inside the bucket where all the segments are stored. 	|
 
 **Flink:**
-| Key 	| Value 	| Description 	|
-|---	|---	|---	|
-| checkpoint_store_type 	| S3 	| Type of the deepstorage container. 	|
-| s3_access_key 	| "" 	| Access key to access the bucket. 	|
-| s3_secret_key 	| "" 	| Secret key to access the bucket. 	|
-| base.url 	| "s3://flink-bucket" 	| Deepstorage container name. 	|
-| checkpoint_store_type 	| S3 	| Type of the deepstorage. 	|
-| s3_access_key 	| "" 	| Access key to access the bucket. 	|
-| s3_secret_key 	| "" 	| Secret key to access the bucket. 	|
-| s3_endpoint 	| "http://172.20.126.232:9000" 	| Minio service endpoint url  to enable flink use MinIO as deepstorage. 	|
-| base.url 	| "s3://flink-bucket" 	| Deepstorage container url. 	|
-| checkpoint_store_type 	| "Blob" 	| Type of the deepstorage container. 	|
-| azure_account 	| "" 	| Account key to access the blob storage. 	|
-| azure_secret 	| "" 	| Secret key to access the blob. 	|
-| base.url 	| "blob://flink-bucket" 	| Deepstorage container url. 	|
-| checkpoint_store_type 	| "gcp" 	| Type of the deepstorage container. 	|
-| google_service_account_key_path 	| "/data/flink/gcp_cred.conf" 	| Configmap path where google credentials are stored and mounted.The credential path needs to exposed as environment variable. 	|
+|       | Key                             | Value                        | Description                                                                                                                  |
+|-------|---------------------------------|------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+|  AWS  | checkpoint_store_type           | S3                           | Type of the deepstorage container.                                                                                           |
+|    | s3_access_key                   | ""                           | Access key to access the bucket.                                                                                             |
+|  AWS  | s3_secret_key                   | ""                           | Secret key to access the bucket.                                                                                             |
+|  AWS  | base.url                        | "s3://flink-bucket"          | Deepstorage container name.                                                                                                  |
+| MinIO | checkpoint_store_type           | S3                           | Type of the deepstorage.                                                                                                     |
+| MinIO | s3_access_key                   | ""                           | Access key to access the bucket.                                                                                             |
+| MinIO | s3_secret_key                   | ""                           | Secret key to access the bucket.                                                                                             |
+| MinIO | s3_endpoint                     | "http://172.20.126.232:9000" | Minio service endpoint url  to enable flink use MinIO as deepstorage.                                                        |
+| MinIO | base.url                        | "s3://flink-bucket"          | Deepstorage container url.                                                                                                   |
+| AZURE | checkpoint_store_type           | "Blob"                       | Type of the deepstorage container.                                                                                           |
+| AZURE | azure_account                   | ""                           | Account key to access the blob storage.                                                                                      |
+| AZURE | azure_secret                    | ""                           | Secret key to access the blob.                                                                                               |
+| AZURE | base.url                        | "blob://flink-bucket"        | Deepstorage container url.                                                                                                   |
+| GCP   | checkpoint_store_type           | "gcp"                        | Type of the deepstorage container.                                                                                           |
+| GCP   | google_service_account_key_path | "/data/flink/gcp_cred.conf"  | Configmap path where google credentials are stored and mounted.The credential path needs to exposed as environment variable. |
 
 **Secor:**
 
