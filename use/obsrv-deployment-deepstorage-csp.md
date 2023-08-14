@@ -12,7 +12,7 @@
   <tr>
     <td rowspan="5">AWS</td>
     <td>druid_deepstorage_type</td>
-    <td><code>S3</code></td>
+    <td><code>"S3"</code></td>
     <td>Deepstorage type where the needs to be pushed.</td>
   </tr>
   <tr>
