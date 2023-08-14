@@ -13,90 +13,90 @@
     <td rowspan="5">AWS</td>
     <td>druid_deepstorage_type</td>
     <td><code>"S3"</code></td>
-    <td>Deepstorage type where the needs to be pushed.</td>
+    <td>Object storage of the AWS Cloud storage Provider to store the segments data</td>
   </tr>
   <tr>
     <td>s3_access_key</td>
     <td><code>""</code></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_secret_key</td>
     <td><code>""</code></td>
-    <td>Secret key to access the bucket.</td>
+    <td>Define the CSP secret key to access the object store.</td>
   </tr>
   <tr>
     <td>druid_indexer_logs_prefix</td>
     <td><code>"backups/druid/druid-task-logs"</code></td>
-    <td>Path inside the bucket where we wanted to store indexer logs.</td>
+    <td>Path to store all the task logs with in the object store.</td>
   </tr>
   <tr>
     <td>druid_storage_baseKey</td>
     <td><code>"druid/segments"</code></td>
-    <td>Path inside the bucket where all the segments are stored.</td>
+    <td>Define the folder with in the object storage to store the segments. </td>
   </tr>
   <tr>
     <td rowspan="8">MinIO</td>
     <td>druid_deepstorage_type</td>
     <td><code>S3</code></td>
-    <td>Deepstorage type where the needs to be pushed.</td>
+    <td>Object storage of the AWS Cloud storage Provider to store the segments data</td>
   </tr>
   <tr>
     <td>druid_s3_endpoint_url</td>
     <td><code>http://172.20.126.232:9000/</code></td>
-    <td>Minio service endpoint url to enable druid use MinIO as deepstorage.</td>
+    <td>Minio service endpoint url to enable druid use MinIO as object store.</td>
   </tr>
   <tr>
     <td>druid_storage_baseKey</td>
     <td><code>"druid/segments"</code></td>
-    <td>Path inside the bucket where all the segments are stored.</td>
+    <td>Define the folder with in the object storage to store the segments.</td>
   </tr>
   <tr>
     <td>s3_access_key</td>
     <td><code>""</code></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_secret_key</td>
     <td><code>""</code></td>
-    <td>Secret key to access the bucket.</td>
+    <td>Define the CSP secret key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_bucket</td>
     <td><code>"druid-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Object store name.</td>
   </tr>
   <tr>
     <td>druid_s3_endpoint_signingRegion</td>
     <td><code>"us-east-2"</code></td>
-    <td>Region where the deepstorage container created.</td>
+    <td>Define the region where object store is present.</td>
   </tr>
   <tr>
     <td>druid_indexer_logs_directory</td>
     <td><code>"backups/druid/druid-task-logs"</code></td>
-    <td>Path inside the bucket where we wanted to store indexer logs.</td>
+    <td>Path to store all the task logs with in the object store.</td>
   </tr>
   <tr>
     <td rowspan="3">AZURE</td>
     <td>azure_storage_account_name</td>
     <td><code>"druid-blob"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Blob store name.</td>
   </tr>
   <tr>
     <td>azure_storage_account_key</td>
     <td><code>"druid/segments"</code></td>
-    <td>Path inside the bucket where all the segments are stored.</td>
+    <td>Define the folder with in the blob storage to store the segments.</td>
   </tr>
   <tr>
     <td>druid_storage_directory</td>
     <td><code>"/data"</code></td>
-    <td>Root path inside the blob storage where all the druid data is pushed.</td>
+    <td>Define the folder with in the blob storage to store the druid data.</td>
   </tr>
   <tr>
     <td rowspan="3">GCP</td>
     <td>gcs_bucket</td>
     <td><code>"druid-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Cloud storage name.</td>
   </tr>
   <tr>
     <td>google_application_credentials</td>
@@ -106,7 +106,7 @@
   <tr>
     <td>druid_storage_baseKey</td>
     <td><code>"druid/segments"</code></td>
-    <td>Path inside the bucket where all the segments are stored.</td>
+    <td>Define the folder with in the cloud storage to store the segments.</td>
   </tr>
 </tbody>
 </table>
@@ -126,54 +126,54 @@
     <td rowspan="4">AWS</td>
     <td>checkpoint_store_type</td>
     <td><code>"S3"</code></td>
-    <td>Type of the deepstorage container.</td>
+    <td>Object storage of the AWS Cloud storage Provider to store the streaming jobs checkpoints.</td>
   </tr>
   <tr>
     <td>s3_access_key</td>
     <td><code>""</code></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_secret_key</td>
     <td><code>""</code></td>
-    <td>Secret key to access the bucket.</td>
+    <td>Define the CSP secret key to access the object store.</td>
   </tr>
   <tr>
     <td>base.url</td>
     <td><code>"s3://flink-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Object storage Base url.</td>
   </tr>
   <tr>
     <td rowspan="5">MinIO</td>
     <td>checkpoint_store_type</td>
     <td><code>"S3"</code"></td>
-    <td>Type of the deepstorage.</td>
+    <td>Object storage of the AWS Cloud storage Provider to store the streaming jobs checkpoints.</td>
   </tr>
   <tr>
     <td>s3_access_key</td>
     <td><code>""</code></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_secret_key</td>
     <td><code>""</code></td>
-    <td>Secret key to access the bucket.</td>
+    <td>Define the CSP secret key to access the object store.</td>
   </tr>
   <tr>
     <td>s3_endpoint</td>
     <td><code>"http://172.20.126.232:9000"</code></td>
-    <td>Minio service endpoint url  to enable flink use MinIO as deepstorage.</td>
+    <td>Minio service endpoint url  to enable flink use MinIO as object store.</td>
   </tr>
   <tr>
     <td>base.url</td>
     <td><code>"s3://flink-bucket"</code></td>
-    <td>Deepstorage container url.</td>
+    <td>Object storage Base url.</td>
   </tr>
   <tr>
     <td rowspan="4">AZURE</td>
     <td>checkpoint_store_type</td>
     <td><code>"Blob"</code></td>
-    <td>Type of the deepstorage container.</td>
+    <td>Blob storage of the Azure Cloud storage Provider to store the streaming jobs checkpoints.</td>
   </tr>
   <tr>
     <td>azure_account</td>
@@ -188,13 +188,13 @@
   <tr>
     <td>base.url</td>
     <td><code>"blob://flink-bucket"</code></td>
-    <td>Deepstorage container url.</td>
+    <td>Blob storage Base url..</td>
   </tr>
   <tr>
     <td rowspan="2">GCP</td>
     <td>checkpoint_store_type</td>
     <td><code>"gcp"</code></td>
-    <td>Type of the deepstorage container.</td>
+    <td>Cloud storage of the Google Cloud storage Provider to store backups</td>
   </tr>
   <tr>
     <td>google_service_account_key_path</td>
@@ -230,7 +230,7 @@
   <tr>
     <td>aws_access_key</td>
     <td><code>""</code></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>aws_secret_key</td>
@@ -250,7 +250,7 @@
   <tr>
     <td>aws_region</td>
     <td><code>"us-east-2"</code></td>
-    <td>Deepstorage container region.</td>
+    <td>object store region.</td>
   </tr>
   <tr>
     <td rowspan="7">MinIO</td>
@@ -261,12 +261,12 @@
   <tr>
     <td>cloud_store_provider</td>
     <td><code>"S3"</code></td>
-    <td>Type of the deepstorage.</td>
+    <td>Type of the object store.</td>
   </tr>
   <tr>
     <td>aws_access_key</td>
     <td><code>""</cdoe></td>
-    <td>Access key to access the bucket.</td>
+    <td>Define the CSP access key to access the object store.</td>
   </tr>
   <tr>
     <td>aws_secret_key</td>
@@ -302,7 +302,7 @@
   <tr>
     <td>azure_account_name</td>
     <td><code>""</code></td>
-    <td>Account key to access the blob storage.</td>
+    <td>Define the CSP access key to access the  blob store.</td>
   </tr>
   <tr>
     <td>azure_account_key</td>
