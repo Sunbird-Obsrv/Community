@@ -219,7 +219,7 @@
   <tr>
     <td rowspan="7">AWS</td>
     <td>upload_manager</td>
-    <td>`com.pinterest.secor.uploader.S3UploadManager`</td>
+    <td><code>com.pinterest.secor.uploader.S3UploadManager</code>code></td>
     <td>s3 upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
   <tr>
