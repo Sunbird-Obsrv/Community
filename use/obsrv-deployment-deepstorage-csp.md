@@ -178,17 +178,17 @@
   <tr>
     <td>azure_account</td>
     <td><code>""</code></td>
-    <td>Account key to access the blob storage.</td>
+    <td>Define the CSP access key to access the blob store.</td>
   </tr>
   <tr>
     <td>azure_secret</td>
     <td><code>""</code></td>
-    <td>Secret key to access the blob.</td>
+    <td>Define the CSP access key to access the blob store.</td>
   </tr>
   <tr>
     <td>base.url</td>
     <td><code>"blob://flink-bucket"</code></td>
-    <td>Blob storage Base url..</td>
+    <td>Blob storage Base url.</td>
   </tr>
   <tr>
     <td rowspan="2">GCP</td>
@@ -225,7 +225,7 @@
   <tr>
     <td>cloud_store_provider</td>
     <td><code>"S3"</code></td>
-    <td>Type of the deepstorage.</td>
+    <td>Object storage of the AWS Cloud storage Provider to store backups</td>
   </tr>
   <tr>
     <td>aws_access_key</td>
@@ -235,17 +235,17 @@
   <tr>
     <td>aws_secret_key</td>
     <td><code>""</code></td>
-    <td>Secret key to access the bucket.</td>
+    <td>Define the CSP secret key to access the object store.</td>
   </tr>
   <tr>
     <td>aws_endpoint</td>
     <td><code>"https://secor-bucket.s3.us-east-2.amazonaws.com/"</code></td>
-    <td>Bucket endpoint url where all the secor backups are pushed.</td>
+    <td>Object store endpoint url where all the secor backups are pushed.</td>
   </tr>
   <tr>
     <td>secor_s3_bucket</td>
     <td><code>"secor-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Object store name.</td>
   </tr>
   <tr>
     <td>aws_region</td>
@@ -297,7 +297,7 @@
   <tr>
     <td>cloud_store_provider</td>
     <td><code>"blob"</code></td>
-    <td>Type of the deepstorage.</td>
+    <td>Blob storage of the Azure Cloud storage Provider to store backups</td>
   </tr>
   <tr>
     <td>azure_account_name</td>
@@ -312,7 +312,7 @@
   <tr>
     <td>azure_container_name</td>
     <td><code>"secor-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Blob store name.</td>
   </tr>
   <tr>
     <td rowspan="4">GCP</td>
@@ -323,12 +323,12 @@
   <tr>
     <td>gs_bucket</td>
     <td><code>"secor-bucket"</code></td>
-    <td>Deepstorage container name.</td>
+    <td>Cloud store name.</td>
   </tr>
   <tr>
     <td>gs_path</td>
     <td><code>"/telemetry-data/"</code></td>
-    <td>Path inside deepstorage where the secor backups are stored.</td>
+    <td>Define the folder with in the Cloud storage to store the druid data.</td>
   </tr>
   <tr>
     <td>gs_credentials_path</td>
