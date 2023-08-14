@@ -219,7 +219,7 @@
   <tr>
     <td rowspan="7">AWS</td>
     <td>upload_manager</td>
-    <td>`com.pinterest.secor.uploader.S3UploadManager`</td>
+    <td><code>com.pinterest.secor.uploader.S3UploadManager</code></td>
     <td>s3 upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
   <tr>
@@ -255,7 +255,7 @@
   <tr>
     <td rowspan="7">MinIO</td>
     <td>upload_manager</td>
-    <td>`com.pinterest.secor.uploader.S3UploadManager`</td>
+    <td><code>com.pinterest.secor.uploader.S3UploadManager</code></td>
     <td>s3 upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
   <tr>
@@ -291,7 +291,7 @@
   <tr>
     <td rowspan="5">AZURE</td>
     <td>upload_manager</td>
-    <td>`com.pinterest.secor.uploader.AzureUploadManager`</td>
+    <td><code>com.pinterest.secor.uploader.AzureUploadManager</code></td>
     <td>Blob upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
   <tr>
@@ -317,7 +317,7 @@
   <tr>
     <td rowspan="4">GCP</td>
     <td>upload_manger</td>
-    <td>`com.pinterest.secor.uploader.GsUploadManager`</td>
+    <td><code>com.pinterest.secor.uploader.GsUploadManager</code></td>
     <td>Google cloud upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
   <tr>
