@@ -239,12 +239,12 @@
   </tr>
   <tr>
     <td>aws_endpoint</td>
-    <td><code>"https://secor-bucket.s3.us-east-2.amazonaws.com/"</code></td>
+    <td><code>"https://demo-bucket.s3.us-east-2.amazonaws.com/"</code></td>
     <td>Object store endpoint url where all the secor backups are pushed.</td>
   </tr>
   <tr>
     <td>secor_s3_bucket</td>
-    <td><code>"secor-bucket"</code></td>
+    <td><code>"demo-bucket"</code></td>
     <td>Object store name.</td>
   </tr>
   <tr>
@@ -285,7 +285,7 @@
   </tr>
   <tr>
     <td>secor_s3_bucket</td>
-    <td><code>"secor-bucket"</code></td>
+    <td><code>"demo-bucket"</code></td>
     <td>Deepstorage container name.</td>
   </tr>
   <tr>
@@ -311,7 +311,7 @@
   </tr>
   <tr>
     <td>azure_container_name</td>
-    <td><code>"secor-bucket"</code></td>
+    <td><code>"demo-bucket"</code></td>
     <td>Blob store name.</td>
   </tr>
   <tr>
@@ -322,7 +322,7 @@
   </tr>
   <tr>
     <td>gs_bucket</td>
-    <td><code>"secor-bucket"</code></td>
+    <td><code>"demo-bucket"</code></td>
     <td>Cloud store name.</td>
   </tr>
   <tr>

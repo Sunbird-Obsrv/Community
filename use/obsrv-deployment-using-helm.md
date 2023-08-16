@@ -78,7 +78,7 @@ chmod 700 get_helm.sh
             "Version": "2012-10-17"
         }```
     - Following three s3 buckets to be created 
-        - Api,Druid,Secor(for ex: `demo-bucket`)
+        - Api,Druid,Secor(for ex:`demo-bucket`)
         - Flink(`flink-bucket`)
         - Velero(`velero-bucket`)
 
@@ -137,10 +137,10 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
     - Variables to be passed before installing this chart:
         - If you are using a service account then the below list of variables needs to be passed:
-            - s3 bucket name, service account role arn For ex: `s3_bucket: "druid-bucket"`, `eks.amazonaws.com/role-arn: "arn:aws:iam::012345678901:role/dev-obsrv-demo-druid-raw-sa-iam-role"`
+            - s3 bucket name, service account role arn For ex: `s3_bucket: "demo-bucket"`, `eks.amazonaws.com/role-arn: "arn:aws:iam::012345678901:role/dev-obsrv-demo-druid-raw-sa-iam-role"`
             - Deepstorage configuration (provided below is the checklist for different type to deepstorages).
         - If you are not using a service account then the below list of variables needs to be passed:
-             - s3 bucket name(for ex: `druid-bucket`), s3 access key, s3 secret key.
+             - s3 bucket name(for ex: `demo-bucket`), s3 access key, s3 secret key.
              - Deepstorage configuration (provided below is the checklist for different type to deepstorages).
     - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
     
