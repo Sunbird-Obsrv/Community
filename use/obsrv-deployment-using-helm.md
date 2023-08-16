@@ -34,7 +34,7 @@ chmod 700 get_helm.sh
     - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-charts`
 4. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
 5. Create the following resources
-    - Service account for Api, Druid, Flink, Secor.
+    - Service account for Api(for ex: `dataset-api-sa`), Druid(for ex: `druid-raw-sa`), Flink(for ex: `flink-sa`), Secor(for ex: `secor-sa`).
     - IAM role for Api, Druid, Flink, Secor with `AmazonS3FullAccess` policy.
     - User for velero and generate credentials
     - IAM role for velero user with the below policy
@@ -78,9 +78,9 @@ chmod 700 get_helm.sh
             "Version": "2012-10-17"
         }```
     - Following three s3 buckets to be created 
-        - Api,Druid,Secor
-        - Flink
-        - Velero
+        - Api,Druid,Secor(for ex: `demo-bucket`)
+        - Flink(`flink-bucket`)
+        - Velero(`velero-bucket`)
 
 ### **Deployment Instructions**
 
