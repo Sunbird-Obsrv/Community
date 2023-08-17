@@ -1,13 +1,10 @@
 # Getting Started with Obsrv Deployment Using Helm
-
 Sunbird Obsrv is a high-performance, cost-effective data stack with several components such as ingestion, querying, processing, backup, visualisation and monitoring. Obsrv 2.0 can be either installed using `Terraform` (Infrastructure as Code tool) or using `Helm` (Kubernets Package Manager).
 
 ## **Prerequisites**
-
 Obsrv runs completely on a Kubernetes cluster. A completely functional Kubernetes cluster is expected for a seamless Obsrv installation.
 
 ### Hardware
-
 Obsrv can support a volume of 5 million events per day with an average size of each event to be around 5 kb with the following specifications.
 
 - Kubernetes version of 1.25 or greater
@@ -19,7 +16,6 @@ Obsrv can support a volume of 5 million events per day with an average size of e
 ### Software
 
 #### Helm
-
 ```bash
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
@@ -27,7 +23,6 @@ chmod 700 get_helm.sh
 ```
 
 #### Helm Dependencies
-
 Run the following `helm repo add` command to download the required dependencies for running Obsrv.
     
 ```bash
@@ -42,7 +37,6 @@ helm repo add prometheus https://prometheus-community.github.io/helm-charts
 - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-charts`
 
 #### Source Code
-
 Clone the [obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation) github repository. The required list of helm charts to deploy Obsrv will be under the `terraform/modules/helm` directory.
 
 ```bash
@@ -55,14 +49,12 @@ cd obsrv-automation/terraform/modules/helm
 Please be advised that the list of resources will be completely different for different cloud service providers.
 
 ##### Common
-
 The following list of buckets/containers need to be created for different services to store the data. This is applicable to Object Storage such as `MinIO/Ceph` as well.
 - `flink-checkpoints`
 - `velero-backup`
 - `obsrv`
 
 ##### AWS
-
 1. IAM role with `AmazonS3FullAccess` policy. Services such as Api, Druid, Flink, Secor need to read and write access to S3 buckets.
 
 2. Velero is a service which provides backups of the entire Obsrv cluster state through snapshots. Velero backup service needs a restricted user access to upload the snapshot state onto S3. The following IAM role policy needs to be attached to user created for velero backup. The access keys needs to be generated for the velero backup user as well.
@@ -165,18 +157,15 @@ The following list of kafka topics are created by default. If you would like to 
 ### Druid
 Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale
 
-#### Druid CRD
-        
+#### Druid CRD   
 ```powershell
 helm upgrade --install --atomic druid-operator druid_operator/druid-operator-helm-chart -n druid-raw --create-namespace --debug
 ```
 
 #### Druid Cluster
-
 Druid requires the following set of configurations to be provided for specific storage systems such as AWS S3, Azure Blob Storage, GCP Storage or MinIO/Ceph
 
 ##### AWS
-
 ```yaml
 druid_deepstorage_type: s3
 # S3 Access keys
@@ -186,7 +175,6 @@ s3_bucket: "obsrv"
 ```
 
 ##### MinIO/Ceph
-
 ```yaml
 druid_deepstorage_type: s3
 # S3 Access keys
@@ -200,7 +188,6 @@ druid_s3_endpoint_signingRegion: "us-east-2"
 ```
 
 ##### Azure
-
 ```yaml
 azure_storage_account_name: ""
 azure_storage_account_key: ""
@@ -208,7 +195,6 @@ azure_storage_container: "obsrv"
 ```
 
 ##### GCP
-
 ```yaml
 # Google cloud credentials json file where the access_token and credentials are stored.
 google_application_credentials: 
@@ -220,11 +206,9 @@ helm upgrade --install --atomic druid-raw druid_raw_cluster/druid-raw-cluster-he
 ```
         
 ### API
-
 This service provides metadata APIs related to various resources such as datasets/datasources in Obsrv. The following configurations need to be specified in the [values.yaml](https://github.com/Sunbird-Obsrv/obsrv-automation/blob/main/terraform/modules/helm/dataset_api/dataset-api-helm-chart/values.yaml) file.
 
 #### AWS
-
 ```yaml
 exhaust_service.CONTAINER: obsrv
 exhaust_service.CONTAINER_STORAGE_PROVIDER: aws
@@ -241,7 +225,6 @@ Flink jobs are used to process and enrich the data ingested into Obsrv in near-r
 #### Configuration Overrides
 
 ##### AWS
-
 ```yaml
 checkpoint_store_type: s3
 # S3 Access keys
@@ -252,7 +235,6 @@ base.url: s3://flink-checkpoints
 ```
 
 ##### MinIO/Ceph
-
 ```yaml
 checkpoint_store_type: s3
 # S3 Access keys
@@ -266,7 +248,6 @@ base.url: s3://flink-checkpoints
 ```
 
 ##### Azure
-
 ```yaml
 checkpoint_store_type: azure
 azure_account: ""
@@ -276,7 +257,6 @@ base.url: blob://flink-bucket
 ```
 
 ##### GCP
-
 ```yaml
 checkpoint_store_type: gcp
 # Google cloud credentials json file where the access_token and credentials are stored.
@@ -285,22 +265,21 @@ base.url: blob://flink-bucket
 ```
 
 #### Flink Merged Pipeline Job
-
 ```powershell
 helm upgrade --install --atomic merged-pipeline flink/flink-helm-chart -n flink --set image.registry=sunbird --set image.repository=sb-obsrv-merged-pipeline --create-namespace --debug
 ```
         
 #### Flink Master Data Processor Job
- 
 ```powershell
 helm upgrade --install --atomic master-data-processor flink/flink-helm-chart -n flink --set image.registry=sunbird --set image.repository=sb-obsrv-master-data-processor --create-namespace --debug
 ```
-    
-### Secor Backup Process
+### Backup Processes
 
-#### Configuration Overrides
+#### Secor
 
-##### AWS
+##### Configuration Overrides
+
+###### AWS
 ```yaml
 # S3 upload manager which is responsible to upload backup to deepstorage.
 upload_manager: com.pinterest.secor.uploader.S3UploadManager
@@ -310,7 +289,7 @@ aws_secret_key: ""
 aws_region: us-east-2
 ```
 
-##### MinIO/Ceph
+###### MinIO/Ceph
 ```yaml
 # S3 upload manager which is responsible to upload backup to deepstorage.
 upload_manager: com.pinterest.secor.uploader.S3UploadManager
@@ -323,8 +302,7 @@ aws_endpoint: http://172.20.126.232:9000/
 aws_region: us-east-2
 ```
 
-##### Azure
-
+###### Azure
 ```yaml
 upload_manager: com.pinterest.secor.uploader.AzureUploadManager
 cloud_store_provider: Azure
@@ -332,17 +310,12 @@ azure_account_name: ""
 azure_account_key: ""
 ```
 
-##### GCP
-
+###### GCP
 ```yaml
 upload_manager: com.pinterest.secor.uploader.GsUploadManager
 # Credentials path where access token and secrets are stored.
 gs_credentials_path: google_app_credentials.json
 ```
-    
-### Backup Processes
-
-#### Secor
 
 Secor backups are performed from various kafka topics which are part of the data processing pipeline. The following list of backup names need to be replaced in the below mentioned command. 
 
@@ -365,7 +338,6 @@ helm upgrade --install --atomic <backup_name> secor/secor-helm-chart -n secor --
 ```
 
 #### Velero
-        
 ```powershell
 helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.yaml --create-namespace --debug --version 3.1.6
 ```
@@ -373,49 +345,41 @@ helm upgrade --install --atomic velero velero/velero -n velero -f velero/values.
 ### Monitoring Services
 
 #### Monitoring Dashboards
-        
 ```powershell
 helm upgrade --install --atomic grafana-configs grafana_configs/grafana-configs-helm-chart -n monitoring --create-namespace --debug
 ```
 
-#### Monitoring Alert Rules
-        
+#### Monitoring Alert Rules 
 ```powershell
 helm upgrade --install --atomic alertrules alert_rules/alert-rules-helm-chart -n monitoring --create-namespace --debug
 ```
 
 #### Druid Exporter
-        
 ```powershell
 helm upgrade --install --atomic druid-exporter druid_exporter/druid-exporter-helm-chart -n druid-raw --create-namespace --debug
 ```
 
 #### Kafka Exporter
-        
 ```powershell
 helm upgrade --install --atomic kafka-exporter kafka_exporter/kafka-exporter-helm-chart -n kafka --create-namespace --debug
 ```
         
 #### Postgres Exporter
-        
 ```powershell
 helm upgrade --install --atomic postgresql-exporter postgresql_exporter/postgresql-exporter-helm-chart -n postgresql --create-namespace --debug
 ```
 
 #### Loki
-        
 ```powershell
 helm upgrade --install --atomic loki loki/loki -n loki -f loki/values.yaml --create-namespace --debug --version 4.8.0
 ```
         
-#### Promtail
-        
+#### Promtail 
 ```powershell
 helm upgrade --install --atomic promtail promtail/promtail -n loki -f promtail/values.yaml --create-namespace --debug --version 6.9.3
 ```
         
 ### Ingestion
-
 This helm chart is used to submit the default ingestion tasks required for the system statistics events 
     
 ```powershell
@@ -425,13 +389,11 @@ helm upgrade --install --atomic submit-ingestion submit_ingestion/submit-ingesti
 ### Visualization
 
 #### Superset
-
 ```powershell
 helm upgrade --install --atomic superset superset/superset-helm-chart -n superset --create-namespace --debug
 ```
 
 ### Loadbalancers
-
 Following is a list of services which are exposed as a LoadBalancer service.
 
 | Component | Service Name | Description|
@@ -440,7 +402,6 @@ Following is a list of services which are exposed as a LoadBalancer service.
 | Superset | service/superset | Data Visualization Tool |
 
 ## Post Deployment
-
 Please find documentation related to various application level functionalities in Obsrv below
 
 - [Create Datasets](https://github.com/Sunbird-Obsrv/obsrv-automation/blob/main/INSTALLATION.md#create-a-dataset)
