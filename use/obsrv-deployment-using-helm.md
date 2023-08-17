@@ -34,7 +34,7 @@ chmod 700 get_helm.sh
     - velero (version - 3.1.6 ) -  `https://vmware-tanzu.github.io/helm-charts`
 4. Clone the repo [https://github.com/Sunbird-Obsrv/obsrv-automation](https://github.com/Sunbird-Obsrv/obsrv-automation), navigate to `obsrv-automation/terraform/modules/helm`, `ls -lrt` to list all the available helm charts and configurations.
 5. Create the following resources
-    - Service account for Api, Druid, Flink, Secor.
+    - Service account for Api(for ex: `dataset-api-sa`), Druid(for ex: `druid-raw-sa`), Flink(for ex: `flink-sa`), Secor(for ex: `secor-sa`).
     - IAM role for Api, Druid, Flink, Secor with `AmazonS3FullAccess` policy.
     - User for velero and generate credentials
     - IAM role for velero user with the below policy
@@ -78,9 +78,9 @@ chmod 700 get_helm.sh
             "Version": "2012-10-17"
         }```
     - Following three s3 buckets to be created 
-        - Api,Druid,Secor
-        - Flink
-        - Velero
+        - Api,Druid,Secor(for ex:`demo-bucket`)
+        - Flink(`flink-bucket`)
+        - Velero(`velero-bucket`)
 
 ### **Deployment Instructions**
 
@@ -111,22 +111,39 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     helm upgrade --install --atomic monitoring monitoring/kube-prometheus-stack -n monitoring -f monitoring/values.yaml --create-namespace --debug
     ```
     
-5. **Kafka:** Kafka is a distributed event store and stream-processing platform. Use the following commands to deploy Kafka:
+5. **Kafka:** Kafka is a distributed event store and stream-processing platform.
+    - Variables to be passed before installing this chart:
+        - Topic configuration like topic name, replication factor, no. of partitions etc. For ex: 
+        ```powershell
+        - name: "dev.ingest"
+          partitions: 1
+          replicationFactor: 1
+        ```
+    Here the topic name is `dev.ingest` with `1` `partition` and `1` `replication factor`.
+
+    Use the following commands to deploy Kafka:
     - Install Command:
-    
+        
     ```powershell
     helm upgrade --install --atomic kafka kafka/kafka-helm-chart -n kafka --create-namespace --debug
     ```
     
-6. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load
-    - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
+6. ****Druid:**** Druid is a high performance, real-time analytics database that delivers sub-second queries on streaming and batch data at scale and under load 
     1. **Druid Operator**
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic druid-operator druid_operator/druid-operator-helm-chart -n druid-raw --create-namespace --debug
         ```
-        
+    - Variables to be passed before installing this chart:
+        - If you are using a service account then the below list of variables needs to be passed:
+            - s3 bucket name, service account role arn For ex: `s3_bucket: "demo-bucket"`, `eks.amazonaws.com/role-arn: "arn:aws:iam::012345678901:role/dev-obsrv-demo-druid-raw-sa-iam-role"`
+            - Deepstorage configuration (provided below is the checklist for different type to deepstorages).
+        - If you are not using a service account then the below list of variables needs to be passed:
+             - s3 bucket name(for ex: `demo-bucket`), s3 access key, s3 secret key.
+             - Deepstorage configuration (provided below is the checklist for different type to deepstorages).
+    - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
+    
     2. **Druid Cluster**
         - Install Command:
         
@@ -135,6 +152,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
 7. **API:** This service enables CRUD operations on the dataset and data source levels.
+    - Variables to be passed before installing this chart 
+        - system-env (for ex: `dev`), container (for ex: `demo-bucket`), container-storage-provider (for ex: `aws`), container-storage-region (for ex: `us-east-2`), eks.amazonaws.com/role-arn (for ex: `arn:aws:iam::0123456789012:role/dev-obsrv-demo-dataset-api-sa-iam-role`)
     - Install command:
     
     ```powershell
@@ -143,12 +162,18 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     
 8. **Flink Streaming Jobs:**  Flink Streaming job which ensures data quality and reliability. It performs various tasks, including data validation against predefined schemas, filtering out duplicates, and enriching data through joins with multiple data stores. This powerful job is designed to efficiently process data at scale.
     1. **Service account**
+    - Variables to be passed before installing this chart:
+        - Service account role arn under annotations (for ex: `eks.amazonaws.com/role-arn:arn:aws:iam::012345678901:role/dev-obsrv-demo-flink-sa-iam-role`)
+
         - Install Command:
     
         ```powershell
         helm upgrade --install --atomic flink-sa flink/flink-helm-chart-sa -n flink --create-namespace --debug
         ```
-    2. **Flink Merged Pipeline Job:**     
+    2. **Flink Merged Pipeline Job:** 
+    - Variables to be passed before installing this chart:
+        - env (for ex: `dev`)
+        - Deepstorage configuration (provided below the checklist for different deepstorage types)    
         - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
         - Install Command:
         
@@ -157,6 +182,10 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     3. **Flink Master Data Processor Job:**
+    - Variables to be passed before installing this chart:
+        - env (for ex: `dev`)
+        - Deepstorage configuration (provided below the checklist for different deepstorage types)    
+        - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
         - Install Command
         
         ```powershell
@@ -165,13 +194,17 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
     
 9. **Secor Backup Process:**
     1. **Service account**
+    - Variables to be passed before installing this chart:
+        - Service account role arn under annotations (for ex: `eks.amazonaws.com/role-arn:arn:aws:iam::012345678901:role/dev-obsrv-demo-secor-sa-iam-role`)
         - Install Command:
         
         ```powershell
         helm upgrade --install --atomic secor-sa secor/secor-helm-chart-sa -n secor --create-namespace --debug
         ```
-        
+    
     2. **Backup Process**
+    - Variables to be passed before installing this chart:
+        - Deepstorage configuration (provided below the checklist for different deepstorage types)    
         - Checklist for deepstorage configuration. [Multiple  Deepstorage Configuration for Druid,Flink,Secor](obsrv-deployment-deepstorage-csp.md)
         - Install Command:
         
@@ -197,6 +230,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     3. **Druid Exporter**
+        - Variables to be passed before installing this chart:
+            - druidURL (for ex: `http://druid-raw-routers.druid-raw.svc:8888`), namespace (for ex: `druid-raw`) 
         - Install Command:
         
         ```powershell
@@ -204,6 +239,9 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     4. **Kafka Exporter**
+        - Variables to be passed before installing this chart:
+            - kafka servers (for ex: `kafka-headless:9093`), zookeeper servers (for ex: `kafka-zookeeper-headless.svc.cluster.local:2181`), prometheus namespace (for ex: `kafka`)
+
         - Install Command:
         
         ```powershell
@@ -211,6 +249,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     5. **Postgres Exporter**
+        - Variables to be passed before installing this chart:
+            - host (for ex: `postgresql-hl.postgresql.svc.cluster.local`), namespace (for ex: `postgresql`)
         - Install Command:
         
         ```powershell
@@ -218,6 +258,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         ```
         
     6. **Velero**
+        - Variables to be passed before installing this chart:
+            - aws_access_key_id, aws_secret_access_key, provider (for ex: `aws`), bucket (for ex: `velero-bucket`), region (for ex: `us-east-2`)
         - Install Command:
         
         ```powershell
@@ -238,6 +280,8 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         helm upgrade --install --atomic promtail promtail/promtail -n loki -f promtail/values.yaml --create-namespace --debug --version 6.9.3
         ```
 11. **Ingestion:** This service submits ingestion to druid.
+    - Variables to be passed before installing this chart:
+        - druid router host (for ex: `druid-raw-routers.druid-raw.svc.cluster.local:8888`), bootstrap servers (for ex: `kafka-headless.kafka.svc.cluster.local:9092`), topic (for ex: `dev.stats`,`dev.masterdata.stats`)
     - Install command:
     
     ```powershell
@@ -251,12 +295,29 @@ In one terminal tab, export the kubeconfig files for your Kubernetes cluster.
         helm upgrade --install --atomic superset superset/superset-helm-chart -n superset --create-namespace --debug
         ```
     2. **Webconsole**
+        - Variables to be passed before installing this chart:
+            - namespace (for ex: `web-console`), prometheus url (for ex: ` http://localhost`), react app grafana url (for ex: ` http://localhost`), react app superset url (for ex: ` http://localhost`)
         - Install command:
 
         ```powershell
         helm upgrade --install --atomic web-console web_console/web-console-helm-chart -n web-console --create-namespace --debug
         ```
+13. **Loadbalancers:** Below is the list of services  
 
+    | Service       	| Loadbalancer (Required/Optional)  	| Description                                                                                                                                                                      	|
+    |---------------	|---------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+    | Postgres      	| `Optional`      	| It is a database which need not be exposed.                                                                                                                                      	|
+    | Redis         	| `Optional`      	| It is a cache service which need not be exposed.                                                                                                                                 	|
+    | Prometheus    	| `Optional`      	| It is a monitoring service which need not be exposed.                                                                                                                            	|
+    | Kafka         	| `Optional`      	| It is a queue service which need not be exposed.                                                                                                                                 	|
+    | Druid         	| `Optional`      	| It is a analytical tool which need not be exposed.                                                                                                                               	|
+    | API           	| **Required** 	| It is the entry point of the data in so it needs to be exposed as a loadbalancer.                                                                                                	|
+    | Pipeline Jobs 	| `Optional`      	| It is a job which process data so it need not be exposed.                                                                                                                        	|
+    | Backups       	| `Optional`      	| It is backup service which need not be exposed.                                                                                                                                  	|
+    | Exporters     	| `Optional`      	| It is a exporter service which send metrics to prometheus from respective applications for ex: postgres-exporter,druid-exporter,kafka-exporter. This doesn't need to be exposed. 	|
+    | Ingestion     	| `Optional`      	| It is a service which submits ingestion for analytical tool. This doesn't need to be exposed.                                                                                    	|
+    | Superset      	| **Required** 	| It is one of the visualization tool which needs to be exposed.                                                                                                                   	|
+    | Web console   	| **Required** 	| It is a visualization tool which need to be exposed.                                                                                                                             	|
 
 ### **Conclusion**
 
