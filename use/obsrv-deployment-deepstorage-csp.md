@@ -316,7 +316,7 @@
   </tr>
   <tr>
     <td rowspan="4">GCP</td>
-    <td>upload_manger</td>
+    <td>upload_manager</td>
     <td><code>com.pinterest.secor.uploader.GsUploadManager</code></td>
     <td>Google cloud upload manager which is responsible to upload backup to deepstorage.</td>
   </tr>
