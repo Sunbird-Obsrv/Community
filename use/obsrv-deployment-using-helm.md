@@ -100,7 +100,7 @@ The following list of buckets/containers need to be created for different servic
     }
     ```
 3. Serive Accounts: Service accounts enable access of the S3 object storage without the need for the access keys. If you prefer to use keys instead, you can skip the creation of service accounts. The list of service accounts needed
-- Dataset API with the name `dataset-api-sa`)
+- Dataset API with the name `dataset-api-sa`
 - Druid with the name `druid-raw-sa`
 - Flink with the name `flink-sa`
 - Secor with the name `secor-sa`
