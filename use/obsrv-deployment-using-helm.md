@@ -200,7 +200,17 @@ azure_storage_container: "obsrv"
 google_application_credentials: 
 gcs_bucket: "obsrv"
 ```
-    
+
+##### [Hadoop](https://druid.apache.org/docs/latest/development/extensions-core/hdfs/)
+```yaml
+druid.storage.type: "hdfs"
+# Include the "druid-hdfs-storage" extension as part of the existing the extensions list
+druid.extensions.loadList: ["druid-hdfs-storage"]
+druid.indexer.logs.directory: "/druid/indexing-logs"
+druid.storage.storageDirectory: "/druid/segments"
+
+```
+
 ```powershell
 helm upgrade --install --atomic druid-raw druid_raw_cluster/druid-raw-cluster-helm-chart -n druid-raw --create-namespace --debug
 ```
@@ -263,6 +273,12 @@ checkpoint_store_type: gcp
 google_application_credentials: ""
 base.url: blob://flink-bucket
 ```
+##### [Hadoop](https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/checkpoints/#available-checkpoint-storage-options)
+```yaml
+# Under base_config in the values.yaml
+base.url: hdfs:///flink-bucket/
+```
+
 
 #### Flink Merged Pipeline Job
 ```powershell
@@ -315,6 +331,11 @@ azure_account_key: ""
 upload_manager: com.pinterest.secor.uploader.GsUploadManager
 # Credentials path where access token and secrets are stored.
 gs_credentials_path: google_app_credentials.json
+```
+
+###### Hadoop
+```yaml
+upload_manager: com.pinterest.secor.uploader.HadoopS3UploadManager
 ```
 
 Secor backups are performed from various kafka topics which are part of the data processing pipeline. The following list of backup names need to be replaced in the below mentioned command. 
