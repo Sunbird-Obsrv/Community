@@ -275,6 +275,7 @@ base.url: blob://flink-bucket
 ```
 ##### [Hadoop](https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/checkpoints/#available-checkpoint-storage-options)
 ```yaml
+checkpoint_store_type: hdfs
 # Under base_config in the values.yaml
 base.url: hdfs:///flink-bucket/
 ```
