@@ -168,6 +168,7 @@ Druid requires the following set of configurations to be provided for specific s
 ##### AWS
 ```yaml
 druid_deepstorage_type: s3
+druid.extensions.loadList: ["druid-s3-extensions"]
 # S3 Access keys
 s3_access_key: ""
 s3_secret_key: ""
@@ -177,6 +178,7 @@ s3_bucket: "obsrv"
 ##### MinIO/Ceph
 ```yaml
 druid_deepstorage_type: s3
+druid.extensions.loadList: ["druid-s3-extensions"]
 # S3 Access keys
 s3_access_key: ""
 s3_secret_key: ""
@@ -189,6 +191,8 @@ druid_s3_endpoint_signingRegion: "us-east-2"
 
 ##### Azure
 ```yaml
+druid.extensions.loadList: ["druid-azure-extensions"]
+druid_deepstorage_type: azure
 azure_storage_account_name: ""
 azure_storage_account_key: ""
 azure_storage_container: "obsrv"
@@ -196,6 +200,8 @@ azure_storage_container: "obsrv"
 
 ##### GCP
 ```yaml
+druid.extensions.loadList: ["druid-google-extensions"]
+druid_deepstorage_type: google
 # Google cloud credentials json file where the access_token and credentials are stored.
 google_application_credentials: 
 gcs_bucket: "obsrv"
@@ -203,7 +209,7 @@ gcs_bucket: "obsrv"
 
 ##### [Hadoop](https://druid.apache.org/docs/latest/development/extensions-core/hdfs/)
 ```yaml
-druid.storage.type: "hdfs"
+druid_deepstorage_type: "hdfs"
 # Include the "druid-hdfs-storage" extension as part of the existing the extensions list
 druid.extensions.loadList: ["druid-hdfs-storage"]
 druid.indexer.logs.directory: "/druid/indexing-logs"
