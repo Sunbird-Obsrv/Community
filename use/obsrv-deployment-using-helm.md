@@ -336,6 +336,10 @@ gs_credentials_path: google_app_credentials.json
 ###### Hadoop
 ```yaml
 upload_manager: com.pinterest.secor.uploader.HadoopS3UploadManager
+# Ensure the secor.s3.filesystem property is updated with the `hdfs` value
+cloud_store_provider=hdfs
+cloud_storage_bucket=namenode-host:8020/dir_path
+# More details please check the secor opensource - https://github.com/pinterest/secor/issues/129
 ```
 
 Secor backups are performed from various kafka topics which are part of the data processing pipeline. The following list of backup names need to be replaced in the below mentioned command. 
