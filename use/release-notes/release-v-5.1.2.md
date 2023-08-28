@@ -10,10 +10,10 @@
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.2_RC2) | release-5.1.0_RC1 |
+| **Analytics Service**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.2_RC2) | release-5.0.0_RC1 |
 | 
-| **Analytics Core**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-core/releases/tag/release-5.1.2_RC2) | release-5.1.0_RC1 |
-| **Core Data Products**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-core-dataproducts/releases/tag/release-5.1.2_RC2) | release-5.1.0_RC1 |
+| **Analytics Core**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-core/releases/tag/release-5.1.2_RC2) | release-5.0.0_RC1 |
+| **Core Data Products**                                  | [**release-5.1.2_RC1**](https://github.com/Sunbird-Obsrv/sunbird-core-dataproducts/releases/tag/release-5.1.2_RC2) | release-5.0.0_RC1 |
 
 
 ### **Build Changes**
