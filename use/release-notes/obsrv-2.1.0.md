@@ -11,14 +11,14 @@ Release Date - 31st Aug'23
 
 * [Enhancement] Datasource API enhancement to validate the Ingestion spec [#OB-546](https://project-sunbird.atlassian.net/browse/OB-546)
 
-* [Enhancement] Wrapper API Implementation to to support the Ingestion spec submission [#OB-547](https://project-sunbird.atlassian.net/browse/OB-547)
+* [Enhancement] Wrapper API Implementation to support the Ingestion spec submission [#OB-547](https://project-sunbird.atlassian.net/browse/OB-547)
 
 * [Enhancement] APIs Data IN/OUT Metrics Generation [#OB-548](https://project-sunbird.atlassian.net/browse/OB-548)
 
 
 #### **Devops** 
 
-* [Devops] Enabling the lables for all the services [#OB-549](https://project-sunbird.atlassian.net/browse/OB-549)
+* [Devops] Enabling the labels for all the services [#OB-549](https://project-sunbird.atlassian.net/browse/OB-549)
 
 * [Devops] Configure the obsrv to run with MinIO object store [#OB-550](https://project-sunbird.atlassian.net/browse/OB-550)
 
