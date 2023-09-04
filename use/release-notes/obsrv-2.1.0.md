@@ -9,7 +9,7 @@ Release Date - 31st Aug'23
 
 * [Enhancement] Configure the Obsrv suprset to use the Obsrv meta APIs [#OB-545](https://project-sunbird.atlassian.net/browse/OB-545)
 
-* [Enhancement] Datasource API enhancemet to validate the Ingestion spec [#OB-546](https://project-sunbird.atlassian.net/browse/OB-546)
+* [Enhancement] Datasource API enhancement to validate the Ingestion spec [#OB-546](https://project-sunbird.atlassian.net/browse/OB-546)
 
 * [Enhancement] Wrapper API Implementation to to support the Ingestion spec submission [#OB-547](https://project-sunbird.atlassian.net/browse/OB-547)
 
