@@ -30,6 +30,7 @@
 * [Release Notes](use/release-notes/README.md)
   * [Obsrv 2.0-GA](use/release-notes/release-v-5.3.0-GA.md)
   * [Obsrv 2.0-Beta](use/release-notes/release-v-5.2.0.md)
+  * [Obsrv 2.1.0](use/release-notes/obsrv-2.1.0.md)
   * [Release V 5.1.0 ](use/release-notes/release-v-5.1.0.md)
   * [Release V 5.1.2 ](use/release-notes/release-v-5.1.2.md)
   * [Release V 5.0.0](use/release-notes/release-v-5.0.0.md)
