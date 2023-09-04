@@ -7,7 +7,7 @@ Release Date - 31st Aug'23
 
 * [Enhancement] Data Exhaust API Implementation [#OB-544](https://project-sunbird.atlassian.net/browse/OB-5442)
 
-* [Enhancement] Configure the Obsrv suprset to use the Obsrv meta APIs [#OB-545](https://project-sunbird.atlassian.net/browse/OB-545)
+* [Enhancement] Configure the Obsrv superset to use the Obsrv meta APIs [#OB-545](https://project-sunbird.atlassian.net/browse/OB-545)
 
 * [Enhancement] Datasource API enhancement to validate the Ingestion spec [#OB-546](https://project-sunbird.atlassian.net/browse/OB-546)
 
