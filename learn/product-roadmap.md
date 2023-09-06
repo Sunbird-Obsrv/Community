@@ -12,13 +12,9 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 2. Refactor of Sunbird Ed Cache Updater Jobs
 3. Enhance the Device register/profile API to send transaction event to obsrv 2.0 system using data IN API or Kafka connector
 
-<mark style="color:orange;">**Simplified Operations**</mark>
-
-1. One-click installation for OCI
-
 <mark style="color:orange;">**Connector Ecosystem**</mark>
 
-1. Object Storage Connectors - cloud storages&#x20;
+1. Object Storage Connectors - Cloud storages&#x20;
 2. MinIO connector
 3. Connector Marketplace/Framework
 4. Postgresql Connector for data & denormalization
@@ -38,12 +34,6 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 1. Configure the obsrv to run with MinIO object store
 2. Support on multi channel alerts
 3. Enabling the labels for all the services
-
-<mark style="color:orange;">**Connector Ecosystem**</mark>
-
-1. Object Storage Connectors - cloud storages&#x20;
-2. MinIO connector - Configure the obsrv to run with MinIO object store
-
 
 
 <mark style="color:orange;">**[Obsrv 2.0.0 GA](<../../use/release-notes/release-v-5.3.0-GA.md>)(Planned release date - 2 May'23)**</mark>
