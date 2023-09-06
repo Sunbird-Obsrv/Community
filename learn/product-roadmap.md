@@ -20,6 +20,8 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 
 1. Object Storage Connectors - cloud storages&#x20;
 2. MinIO connector
+3. Connector Marketplace/Framework
+4. Postgresql Connector for data & denormalization
 
 
 <mark style="color:orange;">**Obsrv 2.1.0 Release date - 31st Aug'23**</mark>
