@@ -8,8 +8,9 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 
 <mark style="color:orange;">**360 degree observability**</mark>
 
-1. Ability to run batch jobs
-2. Support CSV and other popular data formats
+1. Restarting Flink to pick up new datasets. The command service with the Flink restart command needs to be open-sourced.
+2. Refactor of Sunbird Ed Cache Updater Jobs
+3. Enhance the Device register/profile API to send transaction event to obsrv 2.0 system using data IN API or Kafka connector
 
 <mark style="color:orange;">**Simplified Operations**</mark>
 
@@ -19,25 +20,29 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 
 1. Object Storage Connectors - cloud storages&#x20;
 2. MinIO connector
-
+3. Connector Marketplace/Framework
+4. Postgresql Connector for data & denormalization
 
 
 <mark style="color:orange;">**Obsrv 2.1.0 Release date - 31st Aug'23**</mark>
 
 <mark style="color:orange;">**360 degree observability**</mark>
 
-1. Data Management - Data Retention & Archival Policies
-2. Post Aggregate Functions
-3. Data Exhausts
+1. Data Exhaust API - Ability to download the raw data using the Data Exhaust APIs
+2. Druid Query and Ingestion Submission Wrapper APIs - Ability to query and ingestion spec submission wrapper API 
+3. APIs System to generate the Data IN/OUT Metrics Generation
+4. Integrate the Obsrv superset with Query Wrapper APIs
 
 <mark style="color:orange;">**Simplified Operations**</mark>
 
-1. Multi-channel alerts (slack, email, sms)
+1. Configure the obsrv to run with MinIO object store
+2. Support on multi channel alerts
+3. Enabling the labels for all the services
 
 <mark style="color:orange;">**Connector Ecosystem**</mark>
 
-1. Connector Marketplace/Framework&#x20;
-2. Postgresql Connector for data & denormalization
+1. Object Storage Connectors - cloud storages&#x20;
+2. MinIO connector - Configure the obsrv to run with MinIO object store
 
 
 
