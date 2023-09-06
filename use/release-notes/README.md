@@ -6,8 +6,8 @@ In the subsequent pages you will find detailed documentation of these releases:
 [obsrv-2.1.0.md](obsrv-2.1.0.md)
 {% endcontent-ref %}
 
-{% content-ref url="release-v-5.1.0-latest.md" %}
-[release-v-5.1.0-.md](release-v-5.1.0.md)
+{% content-ref url="release-v-5.1.0.md" %}
+[release-v-5.1.0.md](release-v-5.1.0.md)
 {% endcontent-ref %}
 
 {% content-ref url="release-v-5.0.0.md" %}
