@@ -44,8 +44,8 @@ Some additional possibiities that can be visualised using Sunbird Obsrv include:
 * Aggregation of anonymised health data from across platforms, and its `analysis` to arrive at health indicators and patterns at population scale.
 * Analysis of `streams of weather data` from satellites to better `predict` weather patterns.
 
-***
 
-***
+
+
 
 _Obsrv_ allows for extensive configurability so as to enable creation of various custom workflows. Refer to the pages for different components listed in the Product & developer guide page to see details of what configurations are available for each.

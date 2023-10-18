@@ -2,7 +2,7 @@
 
 The Report Service provides capabilities to create and consume reports on the front user interfaces/user apps. The reports are rendered and managed through report configurations.
 
-![](<../../.gitbook/assets/Report Service.png>)
+![](<../../.gitbook/assets/Report Service (1).png>)
 
 #### Key Features:
 

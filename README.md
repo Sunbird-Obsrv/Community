@@ -30,7 +30,7 @@ The generation of all necessary data for measurements, its streaming, processing
 
 **Readymade metrics & Downloadable data**: Derive insights quickly, from pre-defined summary metrics such as time spent in a session, time spent on a content etc. Also get access to raw/ summary datasets via APIs for further need-based analysis.
 
-![](<.gitbook/assets/data flow.png>)
+![](<.gitbook/assets/data flow (1).png>)
 
 **Enabling observability on Sunbird** - watch the video [here](https://www.youtube.com/watch?v=ldK4IJeE4X8)
 
@@ -40,7 +40,7 @@ Sunbird Obsrv is leveraged in DIKSHA - Digital Infrastructure for Knowledge Shar
 
 
 
-_<mark style="color:orange;">****</mark>_[_<mark style="color:orange;">**Contribute to Sunbird OBSRV**</mark>_](https://github.com/Sunbird-Obsrv/Community/discussions/16)_<mark style="color:orange;">****</mark>_
+[_<mark style="color:orange;">**Contribute to Sunbird OBSRV**</mark>_](https://github.com/Sunbird-Obsrv/Community/discussions/16)
 
 
 

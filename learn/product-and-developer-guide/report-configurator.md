@@ -16,7 +16,7 @@ Sunbird Report Configuration Guide:
 
 {% file src="../../.gitbook/assets/SB Report Configuration Guide.pdf" %}
 
-***
+
 
 **Source Code:**
 
