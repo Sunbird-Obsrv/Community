@@ -27,10 +27,10 @@ Telemetry Service is a highly scalable micro service which allows various compon
 | cassandraTtl        | TTL for retention of data for a Cassandra dispatcher                                                | none                                  |
 | threads             | Number of cpu threads to be used by the service                                                     | Default number of cpus on the machine |
 
-***
+
 
 {% hint style="info" %}
-Telemetry documentation [telemetry.sunbird.org](https://app.gitbook.com/o/-Mi9QwJlsfb7xuxTBc0J/s/-MkM7F4oILSpCJPO0YUu/)
+Telemetry documentation [telemetry.sunbird.org](http://127.0.0.1:5000/o/-Mi9QwJlsfb7xuxTBc0J/s/-MkM7F4oILSpCJPO0YUu/)
 {% endhint %}
 
 {% embed url="https://github.com/project-sunbird/sunbird-telemetry-service" %}
