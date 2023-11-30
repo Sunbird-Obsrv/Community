@@ -4,7 +4,30 @@ Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, process
 
 Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
 
-<mark style="color:orange;">**Obsrv 2.1.0 Release date - 30th Nov'23**</mark>
+<mark style="color:orange;">**Obsrv 2.3.0 Release date - 30th Nov'23**</mark>
+
+<mark style="color:orange;">**360 degree observability**</mark>
+
+1. Refactor of Sunbird Ed Cache Updater Jobs - Remove the cache updater jobs as part of Obsrv 2.0, those will be replaced with Master Data Processor Flink Job.
+2. Enhance the Device register/profile API to send transaction event to obsrv 2.0 system using data IN API or Kafka connector
+3. Major refactoring of Obsrv Core for enhancements of datasets.
+
+<mark style="color:orange;">**Connector Ecosystem**</mark>
+
+1. Object Storage Connectors - Cloud storages&#x20;
+2. MinIO connector
+3. Connector Marketplace/Framework
+4. Postgresql Connector for data & denormalization
+
+<mark style="color:orange;">**Obsrv 2.2.0 Release date - 31st Oct'23**</mark>
+
+<mark style="color:orange;">**360 degree observability**</mark>
+
+1. Addressing major vulnerabilities, making Obsrv BB free from vulnerabilities.
+2. Restarting Flink to pick up new datasets. The command service with the Flink restart command needs to be open-sourced.
+3. Few Bug fixes with components & deployment.
+
+<mark style="color:orange;">**Obsrv 2.1.0 Release date - 30th Sep'23**</mark>
 
 <mark style="color:orange;">**360 degree observability**</mark>
 
@@ -18,7 +41,6 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) 
 2. MinIO connector
 3. Connector Marketplace/Framework
 4. Postgresql Connector for data & denormalization
-
 
 <mark style="color:orange;">**Obsrv 2.1.0 Release date - 31st Aug'23**</mark>
 
