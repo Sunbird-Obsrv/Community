@@ -4,20 +4,30 @@ Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, process
 
 Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
 
-<mark style="color:orange;">**Obsrv 2.3.0 Release date - 30th Nov'23**</mark>
+<mark style="color:orange;">**Obsrv 2.0.0 GA Release date - 31st Dec'23**</mark>
 
 <mark style="color:orange;">**360 degree observability**</mark>
 
-1. Refactor of Sunbird Ed Cache Updater Jobs - Remove the cache updater jobs as part of Obsrv 2.0, those will be replaced with Master Data Processor Flink Job.
-2. Enhance the Device register/profile API to send transaction event to obsrv 2.0 system using data IN API or Kafka connector
-3. Major refactoring of Obsrv Core for enhancements of datasets.
+1. **Enhancements in datasets management** - These feature enhances data management capabilities and provides flexibility in dataset maintenance.
+	- Users can now delete draft datasets using the API.
+	- User can now retire live datasets using the API. 
+	- Ability to configure the denorm on the master datasets
+2. **Core pipeline enhancments** - Core pipeline changes to route all the failed events with detailed summary to failed topic.
+3. **Detailed Debugging with Query Store** - Indexing all failed events into the query store for comprehensive and detailed debugging. This feature improves troubleshooting capabilities and accelerates issue resolution.
+4. **Automated Backup Configuration** - Automated the configuration of the backup system during installation, allowing users to define their preferred timezone. This ensures a seamless and customized backup setup for enhanced data protection.
+5. **Aggregated and Filtered Data Sources** - Introduced the option to create aggregated data sources and filtered data sources through the API. Also enhanced API to query on the rollup datasources. This feature provides users with more control over data sources, enabling customization based on specific requirements.
+6. **Filtered Rollups** - Ability to create rollup on a filter using API
+7. **Bug Fixes and Improvements**
+	- Fixed the auto-conversion of the timestamp property to a string.
+	- Automatically convert numeric field to Integer during ingestion into Query Store/Druid.
+	- Improve the code coverage of obsrv core to 100%
 
 <mark style="color:orange;">**Connector Ecosystem**</mark>
 
-1. Object Storage Connectors - Cloud storages&#x20;
-2. MinIO connector
-3. Connector Marketplace/Framework
-4. Postgresql Connector for data & denormalization
+These connectors enable the data IN and OUT of the platform and expand the reach of our platform.
+
+1. **JDBC connector** - This connector supports popular databases such as MySQL, PostgreSQL. 
+2. **Data Stream Source Connector** - This connector supports real-time streaming data sources such as Apache Kafka.
 
 <mark style="color:orange;">**Obsrv 2.2.0 Release date - 31st Oct'23**</mark>
 
