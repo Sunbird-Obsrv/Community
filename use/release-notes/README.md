@@ -4,6 +4,10 @@ In the subsequent pages you will find detailed documentation of these releases:
 
 ### Obsrv 2.0 Release Notes
 
+{% content-ref url="obsrv-2.0.0-GA.md" %}
+[obsrv-2.0.0-GA.md](obsrv-2.0.0-GA.md)
+{% endcontent-ref %}
+
 {% content-ref url="obsrv-2.2.0.md" %}
 [obsrv-2.2.0.md](obsrv-2.2.0.md)
 {% endcontent-ref %}
