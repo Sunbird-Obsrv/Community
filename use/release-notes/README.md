@@ -26,6 +26,10 @@ In the subsequent pages you will find detailed documentation of these releases:
 
 ### Obsrv 1.0 Release Notes
 
+{% content-ref url="release-v-5.1.3.md" %}
+[release-v-5.1.3.md](release-v-5.1.3.md)
+{% endcontent-ref %}
+
 {% content-ref url="release-v-5.1.2.md" %}
 [release-v-5.1.2.md](release-v-5.1.2.md)
 {% endcontent-ref %}
