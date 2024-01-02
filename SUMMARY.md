@@ -35,6 +35,7 @@
   * [Obsrv 5.3.0-GA](use/release-notes/release-v-5.3.0-GA.md)
   * [Release V 5.1.0](use/release-notes/release-v-5.1.0.md)
   * [Release V 5.1.2](use/release-notes/release-v-5.1.2.md)
+  * [Release V 5.1.3](use/release-notes/release-v-5.1.3.md)
   * [Release V 5.0.0](use/release-notes/release-v-5.0.0.md)
   * [Release V 4.10.0](use/release-notes/release-v-4.10.5.md)
 * [Installation Guide](use/installation-guide.md)
