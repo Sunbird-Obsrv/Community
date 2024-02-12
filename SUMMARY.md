@@ -1,6 +1,10 @@
 # Table of contents
 
 * [Overview](README.md)
+  * [NEW STRUCTURE](readme/new-structure/README.md)
+    * [Page 1](readme/new-structure/page-1.md)
+    * [Page 2](readme/new-structure/page-2.md)
+    * [Page 3](readme/new-structure/page-3.md)
 
 ## Learn
 
