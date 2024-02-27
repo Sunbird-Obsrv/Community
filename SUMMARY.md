@@ -29,7 +29,7 @@
     * [Azure Installation Guide](guides/installation/azure-installation-guide.md)
     * [GCP Installation Guide](guides/installation/gcp-installation-guide.md)
     * [OCI Installation Guide](guides/installation/oci-installation-guide.md)
-    * [Data Centre Installation Guide](guides/installation/data-centre-installation-guide.md)
+    * [Data Center Installation Guide](guides/installation/data-center-installation-guide.md)
   * [Dataset Management](guides/dataset-management.md)
   * [Connector APIs](guides/connector-apis.md)
   * [Data In & Out APIs](guides/data-in-and-out-apis.md)

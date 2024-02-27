@@ -76,7 +76,7 @@ Installation of Obsrv requires the following CLI tools as prerequisites. Please 
     az login --allow-no-subscriptions
     ```
 
-#### Installation Steps:
+### Installation Steps:
 
 1.  **Clone the `obsrv-automation` repository**:
 
@@ -103,6 +103,7 @@ Installation of Obsrv requires the following CLI tools as prerequisites. Please 
 
     ```bash
     terragrunt init
+    terragrunt  apply -target module.aks -auto-approve
     terragrunt apply -auto-approve
     ```
 
@@ -126,34 +127,6 @@ Installation of Obsrv requires the following CLI tools as prerequisites. Please 
     ```bash
     export AZ_RESOURCE_GROUP=<your-resource-group>
     ```
-6. Get the Storage Account and Storage Key.
-   1. Look for the Resource Group created above; and find the Storage Account created in the Resource Group.
-   2. From the Storage Account left pane, look for **Access Key** under **Security + network** section.
-   3.  Copy the **Storage account name** and **Key**, and export it as environment variables like below
-
-       ```bash
-       export AZ_STORAGE_ACCOUNT_NAME=<account_name>
-       export AZ_STORAGE_ACCOUNT_KEY=<key>
-       ```
-7.  Export the KUBECONFIG. During cluster creation the `kubeconfig.yaml` will be written in the same folder i.e `obsrv-automation/terraform/azure`
-
-    {% code overflow="wrap" %}
-    ```bash
-    export KUBECONFIG=$(pwd)/<building_block>-<env>-kubeconfig.yaml
-    ```
-    {% endcode %}
-8.  Navigate to the Service Installation Directory
-
-    ```bash
-    cd ../modules/helm/unified_helm/obsrv
-    ```
-9.  Run the below command to install the services
-
-    {% code overflow="wrap" %}
-    ```jsx
-    helm upgrade --install obsrv . --namespace obsrv --create-namespace --set "global.azure_storage_account_name=$AZ_STORAGE_ACCOUNT_NAME" --set "global.azure_storage_account_key=$AZ_STORAGE_ACCOUNT_KEY" --set "global.azure_storage_container=$AZ_RESOURCE_GROUP" --atomic --debug --timeout=1800s
-    ```
-    {% endcode %}
 
 ### Upgrade Steps:
 
@@ -165,4 +138,11 @@ Installation of Obsrv requires the following CLI tools as prerequisites. Please 
     cd ./terraform/azure
     ```
 2. Ensure all the configuration configured during the installation is properly updated in all places.
-3. Run the terraform to upgrade the cluster to the latest versions.
+3.  Run the terraform to upgrade the cluster to the latest versions.
+
+    ```
+    cd ./obsrv-automation
+    git pull
+    cd ./terraform/azure
+    terragrunt apply -auto-approve
+    ```
