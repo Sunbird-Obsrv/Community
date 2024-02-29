@@ -55,17 +55,29 @@ Installation of Obsrv requires the following CLI tools as prerequisites. Please 
     ```bash
     cd ./obsrv-automation/terraform/modules/helm/unified-helm
     ```
-3.  Export the KUBECONFIG environment variable with for your cluster. For example the below command is to set to its default path
+3.  Update the following values in `obsrv/values.yaml`  to reflect your MinIO environment.&#x20;
+
+    ```yaml
+    cloud-storage-provider: &global-cloud-storage-provider "s3"
+    cloud-storage-region: &global-cloud-storage-region "<MINIO_REGION>"
+    s3_bucket: &global-s3-bucket "<MINIO_BUCKET>"
+    s3_access_key: &global-s3-access-key "<MINIO_ACCESS_KEY>"
+    s3_secret_key: &global-s3-secret-access-key "<MINIO_SECRET_KEY>"
+    region: &global-region "<MINIO_REGION>"
+    s3_endpoint_url: &global-s3-endpoint-url "<MINIO_ENDPOINT_URL>"
+    s3_path_style_access: &global-s3-path-style-access "true"
+    ```
+4.  Export the KUBECONFIG environment variable with for your cluster. For example the below command is to set to its default path
 
     ```bash
     export KUBECONFIG=~/.kube/kubeconfig.yaml
     ```
-4.  First create the CRD’s that are required to install Obsrv
+5.  First create the CRD’s that are required to install Obsrv
 
     ```bash
     kubectl create -f ./crds/
     ```
-5.  Run the below command to install the services. The following command may fail a couple of times due to timeouts while downloading the images. Run the same command for a couple of times incase of any errors for the installation to be successful
+6.  Run the below command to install the services. The following command may fail a couple of times due to timeouts while downloading the images. Run the same command for a couple of times incase of any errors for the installation to be successful
 
     {% code overflow="wrap" %}
     ```bash
