@@ -1,5 +1,5 @@
 # <mark style="color:blue;">Obsrv 2.0.1 GA Release</mark>
-Release Date - 31st Jan'24
+Release Date - 29th Feb'24
 ## **Features**
 ----------
 #### **Functional** 
@@ -13,5 +13,21 @@ Release Date - 31st Jan'24
 * [Enhancement] **Tech software upgrades** [#OB-559](https://project-sunbird.atlassian.net/browse/OB-559)
 	 Postgres, Druid, Superset, NodeJS, Kubernetes are upgraded to latest versions.
 
-* [Enhancement] **Improvments** [#OB-559](https://project-sunbird.atlassian.net/browse/OB-559)
-	Fixed unit tests and improve coverage
+* [Enhancement] **Enhancements in dataset API service** [#OB-560](https://project-sunbird.atlassian.net/browse/OB-560)
+	- Update API endpoints
+	- Bug fixes
+
+* [Enhancement] **Infra reliability** [#OB-560](https://project-sunbird.atlassian.net/browse/OB-560)
+	 - Verification of metrics for various services
+	 - Metrics intrumentation for services
+
+* [Enhancement] **Benchmarking** [#OB-560](https://project-sunbird.atlassian.net/browse/OB-560)
+	Processing, Ingestion & Querying benchmarking.
+
+* [Enhancement] **Bug Fixes and Improvements**  [#OB-559](https://project-sunbird.atlassian.net/browse/OB-559)
+	- Fix automation scripts for latest changes
+	- Fixed unit tests and improve coverage
+
+* [Feature] **Connector Framework implementation**
+
+* [Feature] **Hudi Data Ingestion**

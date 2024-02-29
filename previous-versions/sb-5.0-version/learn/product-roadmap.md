@@ -4,25 +4,7 @@ Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, process
 
 Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Obsrv/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
 
-<mark style="color:orange;">**Obsrv 2.0.2 GA Release date - 29th Feb'24**</mark>
-
-<mark style="color:orange;">**Enhancements**</mark>
-
-1. **Infra reliability** - These feature enhances data management capabilities and provides flexibility in dataset maintenance.
-   * Verification of metrics for various services.
-   * Metrics intrumentation for few of the services.
-2. **Enhancments to dataset API service** - API endpoint changes.
-3. **Benchmarking** - Processing, Ingestion & Querying.
-4. **Bug Fixes and Improvements**
-   * Improve the code coverage
-   * Automation script enhancements to support new changes.
-
-<mark style="color:orange;">**Feature**</mark>
-
-1. **Connector Framework implementation**
-2. **Hudi Data Ingestion**
-
-<mark style="color:orange;">**Obsrv 2.0.1 GA Release date - 31st Jan'24**</mark>
+<mark style="color:orange;">**Obsrv 2.0.1 GA Release date - 29th Feb'24**</mark>
 
 <mark style="color:orange;">**Enhancements**</mark>
 
@@ -30,10 +12,22 @@ Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Obsrv/Community/issues)
    * To handle denormalization logic for empty keys, text & numeric keys.
    * Moved failed events sinking into a common base class.
    * Updated framework to created dynamicKafkaSink object.
-2. **Master dataset processor** - can now do denormalization with another master dataset as well.
+   * Master dataset processor can now do denormalization with another master dataset as well.
 3. **Tech software upgrades** - Postgres, Druid, Superset, NodeJS, Kubernetes.
 4. **Dataset Management** - Added timezone handling to store the data in druid in the TZ specified by the dataset.
-5. **Unit Tests** - Fix unit tests and improve coverage.
+5. **Infra reliability** - These feature enhances data management capabilities and provides flexibility in dataset maintenance.
+   * Verification of metrics for various services.
+   * Metrics intrumentation for few of the services.
+6. **Enhancments to dataset API service** - API endpoint changes.
+7. **Benchmarking** - Processing, Ingestion & Querying.
+8. **Bug Fixes and Improvements**
+   * Fix unit tests and improve coverage.
+   * Automation script enhancements to support new changes.
+
+<mark style="color:orange;">**Feature**</mark>
+
+1. **Connector Framework implementation**
+2. **Hudi Data Ingestion**
 
 <mark style="color:orange;">**Obsrv 2.0.0 GA Release date - 31st Dec'23**</mark>
 
