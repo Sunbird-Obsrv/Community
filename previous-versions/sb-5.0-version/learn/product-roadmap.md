@@ -2,7 +2,32 @@
 
 Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, processing and querying of the telemetry data to be agnostic of the data specification of the telemetry data. The last stable release of Sunbird Obsrv 1.0, which is tightly coupled of the [Sunbird Telemetry](https://telemetry.sunbird.org/) Specification will be [Release 5.1.1](../use/release-notes/release-v-5.1.0.md). The product roadmap for Sunbird Obsrv 2.0 has been detailed out below with the features being logically grouped under specific functional features.
 
-Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Lern/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
+Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Obsrv/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
+
+<mark style="color:orange;">**Obsrv 2.0.1 GA Release date - 29th Feb'24**</mark>
+
+<mark style="color:orange;">**Enhancements**</mark>
+
+1. **Core pipeline enhancments**
+   * To handle denormalization logic for empty keys, text & numeric keys.
+   * Moved failed events sinking into a common base class.
+   * Updated framework to created dynamicKafkaSink object.
+   * Master dataset processor can now do denormalization with another master dataset as well.
+3. **Tech software upgrades** - Postgres, Druid, Superset, NodeJS, Kubernetes.
+4. **Dataset Management** - Added timezone handling to store the data in druid in the TZ specified by the dataset.
+5. **Infra reliability** - These feature enhances data management capabilities and provides flexibility in dataset maintenance.
+   * Verification of metrics for various services.
+   * Metrics intrumentation for few of the services.
+6. **Enhancments to dataset API service** - API endpoint changes.
+7. **Benchmarking** - Processing, Ingestion & Querying.
+8. **Bug Fixes and Improvements**
+   * Fix unit tests and improve coverage.
+   * Automation script enhancements to support new changes.
+
+<mark style="color:orange;">**Feature**</mark>
+
+1. **Connector Framework implementation**
+2. **Hudi Data Ingestion**
 
 <mark style="color:orange;">**Obsrv 2.0.0 GA Release date - 31st Dec'23**</mark>
 
