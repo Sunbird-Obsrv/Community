@@ -4,6 +4,38 @@ Sunbird Obsrv 2.0 has been redesigned from ground up to allow ingestion, process
 
 Sunbird Obsrv [ISSUE TRACKER](https://github.com/Sunbird-Obsrv/Community/issues) : This is the link to the set of issues/ submissions or requests that are being considered for development as part of the Sunbird Obsrv roadmap. You can upvote an issue if you find it relevant, or <mark style="color:blue;">add a new issue</mark> to the list
 
+<mark style="color:orange;">**Obsrv AMJ-2024 Stories**</mark>
+
+1. **APIs Refactoring**
+   * Dataset CRUD API
+   * Dataset Management API
+   * Data In Out APIs
+   * Query Template APIs
+
+2. **Automation Refactoring**
+   * Helm charts refactoring
+   * Wrapper over helm charts
+
+3. **Connectors**
+   * Connectors Framework
+   * Connectors Management
+   * Connectors Implementation
+
+4. **Hudi Integration**
+   * Create an ingestion spec for Lakehouse tables
+   * Streaming job implementation to write Raw Data to Lakehouse
+   * Timestamp Based Partitioner for Apache Hudi
+   * Hudi Sink Configuration Optimization
+   * Deployment Automation for Hudi Sink Connector - AWS/Local Datacenter
+   * Query API Unification for the Lakehouse/Real-Time store - Design
+   * Query API Unification for the Lakehouse/Real-Time store - Implementation
+   * Dedup Challenges with introduction of Lakehouse - Design
+   * Dedup Challenges with introduction of Lakehouse - Implementation
+   * Design Rollups for the Lakehouse
+   * Rollups implementation for the Lakehouse
+   * Deployment Automation for Hudi Sink Connector - Azure
+   * Deployment Automation for Hudi Sink Connector - GCP
+
 <mark style="color:orange;">**Obsrv 2.0.1 GA Release date - 29th Feb'24**</mark>
 
 <mark style="color:orange;">**Enhancements**</mark>
