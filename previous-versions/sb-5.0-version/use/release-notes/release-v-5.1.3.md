@@ -10,12 +10,12 @@
 #### **Github Tag Details**
 | Component                                             | Build Tag                                                                                                        | Deploy Tag                                                                                                 |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |------------------------------------------------------------------------------------------------------------|
-| **Analytics Service**                                  | [**release-5.1.3_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.3_RC1) | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
-| **Spark Provision**                                  | NA | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
-| **Analytics Core**                                  | [**release-5.1.3_RC3**](https://github.com/Sunbird-Obsrv/sunbird-analytics-core/releases/tag/release-5.1.3_RC3) | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
-| **Core Data Products**                                  | [**release-5.1.3_RC3**](https://github.com/Sunbird-Obsrv/sunbird-core-dataproducts/releases/tag/release-5.1.3_RC3) | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
-| **Secor**                                  | NA | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
-| **Flink Jobs**                                  | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) | [**release-5.2.0_RC5**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC5) |
+| **Analytics Service**                                  | [**release-5.1.3_RC1**](https://github.com/Sunbird-Obsrv/sunbird-analytics-service/releases/tag/release-5.1.3_RC1) | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
+| **Spark Provision**                                  | NA | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
+| **Analytics Core**                                  | [**release-5.1.3_RC4**](https://github.com/Sunbird-Obsrv/sunbird-analytics-core/releases/tag/release-5.1.3_RC4) | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
+| **Core Data Products**                                  | [**release-5.1.3_RC5**](https://github.com/Sunbird-Obsrv/sunbird-core-dataproducts/releases/tag/release-5.1.3_RC5) | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
+| **Secor**                                  | NA | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
+| **Flink Jobs**                                  | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) | [**release-5.2.0_RC6**](https://github.com/Sunbird-Obsrv/sunbird-data-pipeline/releases/tag/release-5.2.0_RC6) |
 
 ### **Build Changes**
 
