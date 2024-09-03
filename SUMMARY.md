@@ -76,4 +76,5 @@
       * [Discuss](https://github.com/Sunbird-Obsrv/Community/discussions)
       * [Contribute to Obsrv](https://github.com/Sunbird-Obsrv/Community/discussions/16)
     * [Raise an Issue](https://github.com/Sunbird-Obsrv/Community/discussions/14)
-* [Release Notes](release-notes/1.1.0-beta.md)
+* [Release Notes](release-notes/README.md)
+  * [1.1.0-beta](release-notes/1.1.0-beta.md)
