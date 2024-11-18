@@ -178,7 +178,7 @@ export cloud_env=aws
 export AWS_ACCESS_KEY_ID=<aws-access-key>
 export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
 export AWS_DEFAULT_REGION=<aws-region>
-sh install.sh all
+sh ./kitchen/install.sh all
 ```
 
 ---
@@ -205,7 +205,7 @@ sh install.sh all
     export AWS_ACCESS_KEY_ID=<aws-access-key>
     export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
     export AWS_DEFAULT_REGION=<aws-region>
-    sh install.sh all
+    sh ./kitchen/install.sh all
     ```
 
 ---
