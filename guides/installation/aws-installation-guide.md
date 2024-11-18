@@ -195,10 +195,10 @@ After completing the installation, follow these steps to verify that all compone
     kubectl get pods -A
     ```
     All pods should be in `Running` state. Common namespaces to check:
-    - `flink`: Core Obsrv components
+    - `flink`: Core Pipeline
     - `monitoring`: Monitoring stack
     - `dataset-api`: Dataset APIs
-    - `web-console`: Obsrv web console
+    - `web-console`: Dataset Management console
 
 2. **Check Services**:
     ```bash
