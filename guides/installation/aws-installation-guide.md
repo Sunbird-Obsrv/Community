@@ -1,161 +1,249 @@
-# AWS Installation Guide
+# Obsrv AWS Installation Guide
+
+This guide provides detailed, step-by-step instructions for installing and configuring Obsrv on AWS, utilizing Terraform, Terragrunt, and Helm.
+
+---
 
 ## Infrastructure Requirements
 
-### 1. Minimal Installation
-   - **CPU Requirements**: Minimum of 16 CPUs. Recommended: 2 nodes with 8 cores each, totaling 64GB RAM.
-   - **Availability Zone**: All machines should be in the same availability zone to avoid cross-zone data transfer charges. The Obsrv installer will automatically create the EKS cluster for you.
+### 1. System Specifications
+- **CPU**: Minimum of 24 CPUs. For optimal performance, use 3 nodes with 8 cores each (total 96GB of RAM).
+- **Availability Zones**: All instances should be within the same availability zone to minimize cross-zone data transfer costs. The Obsrv installer will automatically create the EKS (Elastic Kubernetes Service) cluster for you.
 
-### 2. Networking Environment
-   - **CIDR Range**: Ensure a /23 CIDR (512 IPs) for your environment.
-     - Example: A VPC with `10.0.0.0/23` provides IPs from `10.0.0.0` to `10.0.1.255`.
-   - **Subnets**: Create subnets in all availability zones within your region.
+### 2. Networking Setup
+- **CIDR Block**: Use a `/23` CIDR range (512 IPs) for your environment.
+    - Example: A VPC with `10.0.0.0/23` provides IPs from `10.0.0.0` to `10.0.1.255`.
+- **Subnets**: Ensure subnets are created in all availability zones within your AWS region.
 
-## Software Prerequisites
+---
 
-Obsrv installation requires several CLI tools. The installation instructions provided here are specific to **Linux-based operating systems**.
+## Prerequisites
 
-### Terraform
-   - **Version**: CLI version 1.5.x or earlier.
-   ```bash
-   curl "https://releases.hashicorp.com/terraform/1.5.2/terraform_1.5.2_linux_amd64.zip" -o "terraform.zip" && unzip terraform.zip && sudo mv terraform /usr/local/bin/ && rm terraform.zip
-   ```
-   - [Terraform Download](https://developer.hashicorp.com/terraform/install)
+Before beginning the installation, make sure the following tools are installed on your Linux-based system:
 
-### Terragrunt
-   - **Version**: CLI version 0.48 or later.
-   ```bash
-   curl -OL https://github.com/gruntwork-io/terragrunt/releases/download/v0.49.0/terragrunt_linux_amd64 && sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt && sudo chmod +x /usr/local/bin/terragrunt
-   ```
-   - [Terragrunt Download](https://terragrunt.gruntwork.io/docs/getting-started/install/)
+### 1. **Terraform**
+   - **Version**: 1.5.x or earlier
+   - **Installation**:
+     ```bash
+     curl "https://releases.hashicorp.com/terraform/1.5.2/terraform_1.5.2_linux_amd64.zip" -o "terraform.zip" && unzip terraform.zip && sudo mv terraform /usr/local/bin/ && rm terraform.zip
+     ```
+   - [Download Terraform](https://developer.hashicorp.com/terraform/install)
 
-### Terrahelp
-   - **Version**: CLI version 0.7.5 or later.
-   ```bash
-   curl -OL https://github.com/opencredo/terrahelp/releases/download/v0.7.5/terrahelp_0.7.5_linux_386.tar.gz && tar -xzf terrahelp_0.7.5_linux_386.tar.gz && sudo mv terrahelp /usr/local/bin/terrahelp && sudo chmod +x /usr/local/bin/terrahelp
-   ```
-   - [Terrahelp Download](https://github.com/opencredo/terrahelp?tab=readme-ov-file#installation)
+### 2. **Terragrunt**
+   - **Version**: 0.48 or later
+   - **Installation**:
+     ```bash
+     curl -OL https://github.com/gruntwork-io/terragrunt/releases/download/v0.49.0/terragrunt_linux_amd64 && sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt && sudo chmod +x /usr/local/bin/terragrunt
+     ```
+   - [Download Terragrunt](https://terragrunt.gruntwork.io/docs/getting-started/install/)
 
-### Helm
-   - **Version**: CLI version 3.10.2 or later.
-   ```bash
-   curl https://get.helm.sh/helm-v3.10.2-linux-amd64.tar.gz -o helm.tar.gz && tar -zxvf helm.tar.gz && sudo mv linux-amd64/helm /usr/local/bin/
-   ```
-   - [Helm Download](https://helm.sh/docs/intro/install/)
+### 3. **Terrahelp**
+   - **Version**: 0.7.5 or later
+   - **Installation**:
+     ```bash
+     curl -OL https://github.com/opencredo/terrahelp/releases/download/v0.7.5/terrahelp_0.7.5_linux_386.tar.gz && tar -xzf terrahelp_0.7.5_linux_386.tar.gz && sudo mv terrahelp /usr/local/bin/terrahelp && sudo chmod +x /usr/local/bin/terrahelp
+     ```
+   - [Download Terrahelp](https://github.com/opencredo/terrahelp?tab=readme-ov-file#installation)
 
-### AWS CLI
-   - **Version**: CLI tool version 2.10 or later.
-   ```bash
-   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
-   sudo ./aws/install
-   # Update outdated AWS CLI:
-   sudo ./aws/install --update
-   ```
-   - [AWS CLI Download](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+### 4. **Helm**
+   - **Version**: 3.10.2 or later
+   - **Installation**:
+     ```bash
+     curl https://get.helm.sh/helm-v3.10.2-linux-amd64.tar.gz -o helm.tar.gz && tar -zxvf helm.tar.gz && sudo mv linux-amd64/helm /usr/local/bin/
+     ```
+   - [Download Helm](https://helm.sh/docs/intro/install/)
+
+### 5. **AWS CLI**
+   - **Version**: 2.10 or later
+   - **Installation**:
+     ```bash
+     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
+     sudo ./aws/install
+     ```
+   - **Update AWS CLI**:
+     ```bash
+     sudo ./aws/install --update
+     ```
+   - [Download AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+---
 
 ## Installation Steps
 
 ### 1. Clone the Obsrv Repository
-   ```bash
-   git clone https://github.com/Sanketika-Obsrv/obsrv-automation.git
-   ```
+Start by cloning the Obsrv automation repository:
+```bash
+git clone https://github.com/Sanketika-Obsrv/obsrv-automation.git
+```
 
-### 2. Cluster Creation
-   - **Navigate to Directory**:
-     ```bash
-     cd ./obsrv-automation/terraform/aws/vars
-     ```
+### 2. Configure the Cluster
 
-   - **Update Configuration Files**: Update `cluster_overides.tf` to match your environment settings.
-     ```jsx
-     building_block                = "obsrv"
-     env                           = "dev"
-     region                        = "us-east-2"
-     availability_zones            = ["us-east-2a", "us-east-2b", "us-east-2c"]
-     timezone                      = "UTC"
-     create_kong_ingress           = "true"
-     create_vpc                    = "true"
-     create_velero_user            = "true"
-     vpc_id                        = ""
-     eks_nodes_subnet_ids          = [""]
-     eks_master_subnet_ids         = [""]
-     velero_aws_access_key_id      = "<your_aws_access_key_id>"
-     velero_aws_secret_access_key  = "<your_aws_secret_access_key>"
-     eks_node_group_instance_type  = ["t2.2xlarge"]
-     eks_node_group_capacity_type  = "ON_DEMAND"  
-     eks_node_group_scaling_config = { desired_size = 4, max_size = 4, min_size = 1 }
-     eks_node_disk_size            = 100
-     ```
+1. **Navigate to the Configuration Directory**:
+    ```bash
+    cd ./obsrv-automation/terraform/aws/vars
+    ```
 
-   - **S3 Bucket Configuration**: Obsrv requires an S3 bucket for cluster state storage. Update the bucket name in `setup.conf` with your bucket name.
-     ```bash
-     AWS_ACCESS_KEY_ID=<your_access_key_id>
-     AWS_SECRET_ACCESS_KEY=<your_secret_access_key>
-     AWS_DEFAULT_REGION="us-east-2"
-     KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config"
-     AWS_TERRAFORM_BACKEND_BUCKET_NAME="obsrv-tfstate"
-     AWS_TERRAFORM_BACKEND_BUCKET_REGION="us-east-2"
-     ```
+2. **Update Configuration Files**:
+    - Open `cluster_overides.tf` and modify the configuration values to match your environment.
+    ```plaintext
+    building_block = "obsrv"
+    env = "dev"
+    region = "us-east-2"
+    availability_zones = ["us-east-2a", "us-east-2b", "us-east-2c"]
+    timezone = "UTC"
+    create_kong_ingress = "true"
+    create_vpc = "true"
+    create_velero_user = "true"
+    eks_node_group_instance_type = ["t2.2xlarge"]
+    eks_node_group_capacity_type = "ON_DEMAND"
+    eks_node_group_scaling_config = { desired_size = 3, max_size = 3, min_size = 1 }
+    eks_node_disk_size = 100
+    ```
 
-### 3. Run Installation Script
-   - Make the installation script executable:
-     ```bash
-     chmod +x ./obsrv.sh
-     ```
-   - Run the installation:
-     ```bash
-     ./obsrv.sh install --config ./obsrv.conf --install_dependencies false
-     ```
-     - Setting `install_dependencies=true` will automatically install required dependencies.
+3. **Configure S3 for Cluster State**:
+    - Open `setup.conf` and update your AWS credentials and bucket names.
+    ```bash
+    AWS_ACCESS_KEY_ID=<your_access_key_id>
+    AWS_SECRET_ACCESS_KEY=<your_secret_access_key>
+    AWS_DEFAULT_REGION="us-east-2"
+    KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config"
+    AWS_TERRAFORM_BACKEND_BUCKET_NAME="obsrv-tfstate"
+    AWS_TERRAFORM_BACKEND_BUCKET_REGION="us-east-2"
+    ```
 
-### 4. Verify Cluster Setup
-   - Use `kubectl get svc --all-namespaces` to check if all services are running.
+### 3. Run the Installation Script
 
-## Obsrv Installation
+1. **Make the Script Executable**:
+    ```bash
+    chmod +x ./obsrv.sh
+    ```
 
-1. **Navigate to Helm Chart Directory**
-   ```bash
-   cd ./obsrv-automation/helmcharts/
-   ```
+2. **Run the Installation**:
+    - To start the installation, run the script:
+    ```bash
+    ./obsrv.sh install --config ./obsrv.conf --install_dependencies false
+    ```
+    - If you want the installer to automatically handle dependencies, set `install_dependencies=true`.
 
-2. **Update AWS Cloud Values**
-   - Edit `global-cloud-values-aws.yaml` with your environment settings.
-     ```jsx
-     global:
-       cloud_storage_provider: &cloud_storage_provider "aws"
-       cloud_store_provider: &cloud_store_provider "s3"
-       cloud_storage_region: &cloud_storage_region "<region>"
-       dataset_api_cloud_bucket: "<dataset_bucket_name>"
-       config_api_cloud_bucket: "<config_bucket_name>"
-       postgresql_backup_cloud_bucket: &backups_bucket "<backup_bucket_name>"
-       redis_backup_cloud_bucket: &redis_backup_cloud_bucket "<redis_backup_bucket_name>"
-       velero_backup_cloud_bucket: &velero_backup_cloud_bucket "<velero_backup_bucket_name>"
-       cloud_storage_bucket: &cloud_storage_bucket "<storage_bucket_name>"
-       hudi_metadata_bucket: &hudi_metadata_bucket "s3a://<hudi_bucket_name>/hudi"
-     ```
+### 4. Verify the Cluster
 
-3. **Install Obsrv**
-   ```bash
-   sh install.sh all
-   ```
+Once the installation completes, verify that your Kubernetes cluster is up and running:
+```bash
+kubectl get nodes
+```
+This should show the nodes in your Kubernetes cluster.
+
+---
+
+## Helm Chart Configuration
+
+### 1. Navigate to the Helm Chart Directory
+```bash
+cd ./obsrv-automation/helmcharts/
+```
+
+### 2. Update AWS Cloud Configuration
+Modify `global-cloud-values-aws.yaml` with the appropriate values for your environment:
+```yaml
+global:
+  cloud_storage_provider: "aws"
+  cloud_store_provider: "s3"
+  cloud_storage_region: "<region>"
+  dataset_api_cloud_bucket: "<dataset_bucket_name>"
+  config_api_cloud_bucket: "<config_bucket_name>"
+  postgresql_backup_cloud_bucket: "<backup_bucket_name>"
+  redis_backup_cloud_bucket: "<redis_backup_bucket_name>"
+  velero_backup_cloud_bucket: "<velero_backup_bucket_name>"
+  cloud_storage_bucket: "<storage_bucket_name>"
+  hudi_metadata_bucket: "s3a://<hudi_bucket_name>/hudi"
+  cloud_storage_config: |
+    '{"identity":"<access-key>","credential":"<secret-key>","region":"<region-name>"}'
+
+  storage_class_name: "gp2"
+  checkpoint_bucket: "s3://<checkpoint-bucket-name>"
+  s3_access_key: "<aws-access-key>"
+  s3_secret_key: "<aws-secret-key>"
+
+kong_annotations:
+  service.beta.kubernetes.io/aws-load-balancer-type: nlb
+  service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+  service.beta.kubernetes.io/aws-load-balancer-eip-allocations: "<elastic-ip>"
+  service.beta.kubernetes.io/aws-load-balancer-subnets: "<subnet-id>"
+
+service_accounts:
+  enabled: true
+  secor: eks.amazonaws.com/role-arn: "<role-arn>"
+  dataset_api: eks.amazonaws.com/role-arn: "<role-arn>"
+  config_api: eks.amazonaws.com/role-arn: "<role-arn>"
+  druid_raw: eks.amazonaws.com/role-arn: "<role-arn>" 
+  flink: eks.amazonaws.com/role-arn: "<role-arn>" 
+  postgresql_backup: eks.amazonaws.com/role-arn: "<role-arn>" 
+  redis_backup: eks.amazonaws.com/role-arn: "<role-arn>" 
+  s3_exporter: eks.amazonaws.com/role-arn: "<role-arn>" 
+  spark: eks.amazonaws.com/role-arn: "<role-arn>" 
+
+velero-backup:
+  credentials:
+    useSecret: true
+    secretContents:
+      cloud: |
+        [default]
+        aws_access_key_id="<aws-access-key>"
+        aws_secret_access_key="<aws-secret-key>"
+
+trino:
+  additionalCatalogs:
+    lakehouse: |-
+      connector.name=hudi
+      hive.metastore.uri=thrift://hudi-hms.hms.svc:9083
+      hive.s3.aws-access-key=<aws-access-key>
+      hive.s3.aws-secret-key=<aws-secret-key>
+      hive.s3.ssl.enabled=false
+```
+
+### 3. Update Domain Configuration
+In `global-values.yaml`, replace `<domain>` with your actual domain or Elastic IP:
+```yaml
+domain: "<domain>.sslip.io"
+```
+
+### 4. Install Obsrv
+Set the environment variables and run the installation:
+```bash
+export cloud_env=aws
+export AWS_ACCESS_KEY_ID=<aws-access-key>
+export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
+export AWS_DEFAULT_REGION=<aws-region>
+sh install.sh all
+```
+
+---
 
 ## Upgrade Steps
 
-1. **Pull Latest Code**
-   ```bash
-   cd ./obsrv-automation
-   git pull
-   cd ./automation-scripts/infra-setup
-   ```
+1. **Pull the Latest Code**:
+    ```bash
+    cd ./obsrv-automation
+    git pull
+    cd ./automation-scripts/infra-setup
+    ```
 
-2. **Update Configurations**: Ensure all configurations are updated as needed.
+2. **Update Configurations**: Review and update configuration values as needed.
 
 3. **Run Terraform for Upgrade**:
-   ```bash
-   ./obsrv.sh install --config ./obsrv.conf --install_dependencies false
-   ```
+    ```bash
+    ./obsrv.sh install --config ./obsrv.conf --install_dependencies false
+    ```
 
-4. **Update Cloud Values and Re-Install**:
-   ```bash
-   sh install.sh all
-   ```
+4. **Upgrade with Updated Cloud Values**:
+    ```bash
+    export cloud_env=aws
+    export AWS_ACCESS_KEY_ID=<aws-access-key>
+    export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
+    export AWS_DEFAULT_REGION=<aws-region>
+    sh install.sh all
+    ```
+
+---
+
+By following these steps, you will ensure a successful installation and configuration of Obsrv on AWS.
