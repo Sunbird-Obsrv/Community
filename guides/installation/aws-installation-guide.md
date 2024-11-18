@@ -184,6 +184,35 @@ chmod +x ./kitchen/install.sh
 
 ---
 
+## Post-Installation Verification
+
+After completing the installation, follow these steps to verify that all components are running correctly:
+
+### 1. Check Kubernetes Components
+
+1. **Verify all pods are running**:
+    ```bash
+    kubectl get pods -A
+    ```
+    All pods should be in `Running` state. Common namespaces to check:
+    - `flink`: Core Obsrv components
+    - `monitoring`: Monitoring stack
+    - `dataset-api`: Dataset APIs
+    - `web-console`: Obsrv web console
+
+2. **Check Services**:
+    ```bash
+    kubectl get svc -A
+    ```
+    Verify that essential services have external IPs assigned, particularly the Kong service.
+
+If any component fails these checks, refer to the component-specific logs:
+```bash
+kubectl logs -f <pod-name> -n <namespace>
+```
+
+---
+
 ## Upgrade Steps
 
 1. **Pull the Latest Code**:
