@@ -40,7 +40,8 @@ Start by cloning the Obsrv automation repository and checkout to either latest r
 git clone https://github.com/Sunbird-Obsrv/obsrv-automation.git
 ```
 
-### 2. Configure the Cluster
+### 2. Configure the Kubernetes Cluster
+By executing the following commands which will bring up the kubernetes cluster in the AWS environment of configured region.
 
 1. **Navigate to the Configuration Directory**:
     ```bash
