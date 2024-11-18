@@ -50,7 +50,7 @@ By executing the following commands which will bring up the kubernetes cluster i
 
 2. **Update Configuration Files**:
     - Open `cluster_overides.tf` and modify the configuration values to match your environment.
-    ```plaintext
+    ```bash
     building_block = "obsrv"
     env = "dev"
     region = "us-east-2"
