@@ -172,13 +172,14 @@ domain: "<domain>.sslip.io"
 ```
 
 ### 4. Install Obsrv
-Set the environment variables and run the installation:
+Make the script executable and set the environment variables and run the installation:
 ```bash
 export cloud_env=aws
 export AWS_ACCESS_KEY_ID=<aws-access-key>
 export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
 export AWS_DEFAULT_REGION=<aws-region>
-sh ./kitchen/install.sh all
+chmod +x ./kitchen/install.sh
+./kitchen/install.sh all
 ```
 
 ---
