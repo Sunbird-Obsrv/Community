@@ -35,9 +35,9 @@ Before beginning the installation, make sure the following tools are installed o
 ## Installation Steps
 
 ### 1. Clone the Obsrv Repository
-Start by cloning the Obsrv automation repository:
+Start by cloning the Obsrv automation repository and checkout to either latest release tag or master.
 ```bash
-git clone https://github.com/Sanketika-Obsrv/obsrv-automation.git
+git clone https://github.com/Sunbird-Obsrv/obsrv-automation.git
 ```
 
 ### 2. Configure the Cluster
