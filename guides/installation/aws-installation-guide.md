@@ -21,50 +21,14 @@ This guide provides detailed, step-by-step instructions for installing and confi
 
 Before beginning the installation, make sure the following tools are installed on your Linux-based system:
 
-### 1. **Terraform**
-   - **Version**: 1.5.x or earlier
-   - **Installation**:
-     ```bash
-     curl "https://releases.hashicorp.com/terraform/1.5.2/terraform_1.5.2_linux_amd64.zip" -o "terraform.zip" && unzip terraform.zip && sudo mv terraform /usr/local/bin/ && rm terraform.zip
-     ```
-   - [Download Terraform](https://developer.hashicorp.com/terraform/install)
+| **Tool**         | **Version**        | **Installation Command**                                                                                                                                                        | **Official Documentation**                                    |
+|------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| **Terraform**     | 1.5.x or earlier   | `curl "https://releases.hashicorp.com/terraform/1.5.2/terraform_1.5.2_linux_amd64.zip" -o terraform.zip && unzip terraform.zip && sudo mv terraform /usr/local/bin/ && rm terraform.zip` | [Terraform Install](https://developer.hashicorp.com/terraform/install) |
+| **Terragrunt**    | 0.48 or later      | `curl -OL https://github.com/gruntwork-io/terragrunt/releases/download/v0.49.0/terragrunt_linux_amd64 && sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt && sudo chmod +x /usr/local/bin/terragrunt` | [Terragrunt Install](https://terragrunt.gruntwork.io/docs/getting-started/install/) |
+| **Helm**          | 3.10.2 or later    | `curl https://get.helm.sh/helm-v3.10.2-linux-amd64.tar.gz -o helm.tar.gz && tar -zxvf helm.tar.gz && sudo mv linux-amd64/helm /usr/local/bin/` | [Helm Install](https://helm.sh/docs/intro/install/) |
+| **AWS CLI**       | 2.10 or later      | `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install`                                                      | [AWS CLI Install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) |
 
-### 2. **Terragrunt**
-   - **Version**: 0.48 or later
-   - **Installation**:
-     ```bash
-     curl -OL https://github.com/gruntwork-io/terragrunt/releases/download/v0.49.0/terragrunt_linux_amd64 && sudo mv terragrunt_linux_amd64 /usr/local/bin/terragrunt && sudo chmod +x /usr/local/bin/terragrunt
-     ```
-   - [Download Terragrunt](https://terragrunt.gruntwork.io/docs/getting-started/install/)
-
-### 3. **Terrahelp**
-   - **Version**: 0.7.5 or later
-   - **Installation**:
-     ```bash
-     curl -OL https://github.com/opencredo/terrahelp/releases/download/v0.7.5/terrahelp_0.7.5_linux_386.tar.gz && tar -xzf terrahelp_0.7.5_linux_386.tar.gz && sudo mv terrahelp /usr/local/bin/terrahelp && sudo chmod +x /usr/local/bin/terrahelp
-     ```
-   - [Download Terrahelp](https://github.com/opencredo/terrahelp?tab=readme-ov-file#installation)
-
-### 4. **Helm**
-   - **Version**: 3.10.2 or later
-   - **Installation**:
-     ```bash
-     curl https://get.helm.sh/helm-v3.10.2-linux-amd64.tar.gz -o helm.tar.gz && tar -zxvf helm.tar.gz && sudo mv linux-amd64/helm /usr/local/bin/
-     ```
-   - [Download Helm](https://helm.sh/docs/intro/install/)
-
-### 5. **AWS CLI**
-   - **Version**: 2.10 or later
-   - **Installation**:
-     ```bash
-     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
-     sudo ./aws/install
-     ```
-   - **Update AWS CLI**:
-     ```bash
-     sudo ./aws/install --update
-     ```
-   - [Download AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+---
 
 ---
 
