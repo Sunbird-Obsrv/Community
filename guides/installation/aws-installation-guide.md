@@ -66,12 +66,12 @@ By executing the following commands which will bring up the kubernetes cluster i
     ```
 
 3. **Configure S3 for Cluster State**:
-    - Open `setup.conf` and update your AWS credentials and bucket names.
+    - Open `obsrv.conf` and update your AWS credentials and bucket names.
     ```bash
     AWS_ACCESS_KEY_ID=<your_access_key_id>
     AWS_SECRET_ACCESS_KEY=<your_secret_access_key>
     AWS_DEFAULT_REGION="us-east-2"
-    KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config"
+    KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config.yaml"
     AWS_TERRAFORM_BACKEND_BUCKET_NAME="obsrv-tfstate"
     AWS_TERRAFORM_BACKEND_BUCKET_REGION="us-east-2"
     ```
@@ -172,13 +172,56 @@ In `global-values.yaml`, replace `<domain>` with your actual domain or Elastic I
 domain: "<domain>.sslip.io"
 ```
 
-### 4. Install Obsrv
+### 4. Update Private and Public Keys
+
+Follow these steps to generate and configure the private and public keys for the web console and dataset API:
+
+#### **Step 1: Generate a Private Key**
+Run the following command to generate a private key for the web console:
+
+```bash
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+```
+
+- Open the generated `private_key.pem` file.
+- Copy its contents and update the `USER_TOKEN_PRIVATE_KEY` field in the following file:  
+  `obsrv-automation/helmcharts/services/web-console/values.yaml`
+
+Example:
+```yaml
+USER_TOKEN_PRIVATE_KEY: |-
+    <paste-private-key-here>
+```
+
+---
+
+#### **Step 2: Generate a Public Key**
+Using the private key generated above, create a public key with the following command:
+
+```bash
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+```
+
+- Open the generated `public_key.pem` file.
+- Copy its contents and update the `user_token_public_key` field in the following file:  
+  `obsrv-automation/helmcharts/services/dataset-api/values.yaml`
+
+Example:
+```yaml
+user_token_public_key: <paste-public-key-here>
+```
+
+
+
+### 5. Install Obsrv
 Make the script executable and set the environment variables and run the installation:
 ```bash
 export cloud_env=aws
 export AWS_ACCESS_KEY_ID=<aws-access-key>
 export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
 export AWS_DEFAULT_REGION=<aws-region>
+export KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config.yaml"
+export KUBECONFIG="$HOME/.kube/obsrv-kube-config.yaml"
 chmod +x ./kitchen/install.sh
 ./kitchen/install.sh all
 ```
@@ -233,10 +276,13 @@ kubectl logs -f <pod-name> -n <namespace>
 4. **Upgrade with Updated Cloud Values**:
     ```bash
     export cloud_env=aws
-    export AWS_ACCESS_KEY_ID=<aws-access-key>
-    export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
-    export AWS_DEFAULT_REGION=<aws-region>
-    sh ./kitchen/install.sh all
+   export AWS_ACCESS_KEY_ID=<aws-access-key>
+   export AWS_SECRET_ACCESS_KEY=<aws-secret-key>
+   export AWS_DEFAULT_REGION=<aws-region>
+   export KUBE_CONFIG_PATH="$HOME/.kube/obsrv-kube-config.yaml"
+   export KUBECONFIG="$HOME/.kube/obsrv-kube-config.yaml"
+   chmod +x ./kitchen/install.sh
+   ./kitchen/install.sh all
     ```
 
 ---
