@@ -30,7 +30,7 @@
     * [GCP Installation Guide](guides/installation/gcp-installation-guide.md)
     * [OCI Installation Guide](guides/installation/oci-installation-guide.md)
     * [Data Center Installation Guide](guides/installation/data-center-installation-guide.md)
-  * [Dataset Management](guides/dataset-management.md)
+  * [Dataset Management APIs](guides/dataset-management.md)
   * [Dataset Management Console](guides/management-console-guide.md)
   * [Connector APIs](guides/connector-apis.md)
   * [Data In & Out APIs](guides/data-in-and-out-apis.md)
