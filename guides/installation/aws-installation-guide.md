@@ -7,7 +7,15 @@ This guide provides detailed, step-by-step instructions for installing and confi
 ## Infrastructure Requirements
 
 ### 1. System Specifications
-- **CPU**: Minimum of 24 CPUs. For optimal performance, use 3 nodes with 8 cores each (total 96GB of RAM).
+
+- **CPU Requirements**:  
+  - **Minimum**: 19 CPUs.  
+  - **Optimal Configuration**: 5 nodes with 4 cores each, totaling 80GB of RAM.
+
+The installation package includes both lakehouse and real-time OLAP storage by default. If the lakehouse component is not required, only the real-time OLAP storage can be installed, reducing requirements to **16 CPUs** and **64GB of RAM**. 
+
+In this case, we recommend using **2 nodes with 8 cores each**, totaling **64GB of RAM**, by selecting the **`t2.2xlarge`** AWS instance type.
+
 - **Availability Zones**: All instances should be within the same availability zone to minimize cross-zone data transfer costs. The Obsrv installer will automatically create the EKS (Elastic Kubernetes Service) cluster for you.
 
 ### 2. Networking Setup
@@ -59,9 +67,9 @@ By executing the following commands which will bring up the kubernetes cluster i
     create_kong_ingress = "true"
     create_vpc = "true"
     create_velero_user = "true"
-    eks_node_group_instance_type = ["t2.2xlarge"]
+    eks_node_group_instance_type = ["t2.xlarge"] # Choose depending on your requirements by considering the CPU requirements
     eks_node_group_capacity_type = "ON_DEMAND"
-    eks_node_group_scaling_config = { desired_size = 3, max_size = 3, min_size = 1 }
+    eks_node_group_scaling_config = { desired_size = 5, max_size = 5, min_size = 1 } # Choose depending on your requirements by considering the CPU requirements
     eks_node_disk_size = 100
     ```
 
