@@ -43,7 +43,7 @@ Manage and configure connectors for seamless data integration.
 
 ---
 
-#### **2. Provide Basic Information**  
+### **2. Provide Basic Information**  
 1. Enter the name of the dataset.  
 2. Upload a sample data file or schema file if available.  
 
