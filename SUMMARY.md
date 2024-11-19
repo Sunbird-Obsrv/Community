@@ -34,6 +34,7 @@
   * [Dataset Management Console](guides/management-console-guide.md)
   * [Connector APIs](guides/connector-apis.md)
   * [Data In & Out APIs](guides/data-in-and-out-apis.md)
+  * [Alerts and Notification Channels APIs](guides/alerts-notification-channel-apis.md)
   * [Developer Guide](guides/developer-guide.md)
   * [Example Datasets](guides/example-datasets.md)
   * [Coming Soon!](guides/coming-soon.md)
