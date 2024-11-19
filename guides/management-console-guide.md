@@ -39,7 +39,7 @@ Manage and configure connectors for seamless data integration.
 3. Add custom connectors to meet specific requirements.  
 4. During dataset creation, select and configure the appropriate connector by filling in the required details.  
 
-<figure><img src="../.gitbook/assets/obsrv_v2/connector_page.png" alt=""><figcaption><p>Connectors List Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/obsrv_v2/connectors_page.png" alt=""><figcaption><p>Connectors List Page</p></figcaption></figure>
 <figure><img src="../.gitbook/assets/obsrv_v2/connector_detailed_page.png" alt=""><figcaption><p>Connector Detailed Page</p></figcaption></figure>
 
 ---
