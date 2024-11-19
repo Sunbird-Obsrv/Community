@@ -12,7 +12,11 @@ description: List of APIs to write and read data
 
 ### Data Out (Read) APIs
 
-{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" %}
+{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" examples="example1"%}
+[https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
+{% endswagger %}
+
+{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" examples="example2"%}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
 {% endswagger %}
 
