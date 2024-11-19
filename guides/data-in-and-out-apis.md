@@ -6,11 +6,15 @@ description: List of APIs to write and read data
 
 ### Data In (Write) API
 
+The Data In APIs facilitate writing data into datasets, designed to simplify the ingestion of JSON data
+
 {% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/in/{datasetId}" method="post" %}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
 {% endswagger %}
 
 ### Data Out (Read) APIs
+
+Use the Data Out APIs to fetch data from a dataset with support for SQL and Druid native query formats, suitable for analytics and visualization.
 
 {% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" examples="example1"%}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
@@ -21,6 +25,8 @@ description: List of APIs to write and read data
 {% endswagger %}
 
 ### Template APIs
+
+The Template APIs enable efficient management of templates, including creating new templates, updating existing ones, listing all available templates, and retrieving metadata for specific templates. These APIs are designed to facilitate data retrieval from various sources using predefined template formats. They are particularly recommended for production environments where queries remain relatively static and do not require frequent changes.
 
 {% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/template/create/{template_id}" method="post" %}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
