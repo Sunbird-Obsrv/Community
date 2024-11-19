@@ -48,7 +48,7 @@ Manage and configure connectors for seamless data integration.
 1. Enter the name of the dataset.  
 2. Upload a sample data file or schema file if available.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/dataset_creation_file_upload.png" alt=""><figcaption><p>Dataset Creation</p></figcaption></figure>
 
 ---
 
@@ -56,7 +56,7 @@ Manage and configure connectors for seamless data integration.
 1. Review the schema configuration and make modifications if needed.  
 2. Resolve any data type conflicts automatically with recommendations provided by the console.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/dataset_schema.png" alt=""><figcaption><p>Ingestion Configuration</p></figcaption></figure> 
 
 ---
 
@@ -66,7 +66,7 @@ Manage and configure connectors for seamless data integration.
 3. Automatically detect and address data type conflicts.  
 4. Enable settings to prevent duplicate record ingestion.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/processing_configuration.png" alt=""><figcaption><p>Processing Configuration</p></figcaption></figure> 
 
 ---
 
@@ -76,7 +76,7 @@ Manage and configure connectors for seamless data integration.
 
 Once all sections are configured, review the dataset settings and publish the dataset to make it live.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/storage_configuration.png" alt=""><figcaption><p>Storage Configuration</p></figcaption></figure> 
 
 ---
 
@@ -95,7 +95,9 @@ Once all sections are configured, review the dataset settings and publish the da
 2. Set up notifications for events, ensuring timely action when needed.  
 3. Configure alerts to notify you via channels like Slack, email, and Discord for real-time updates.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/default_system_alerts.png" alt=""><figcaption><p>Infra Alerts</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/custom_alerts.png" alt=""><figcaption><p>Custom Alerts</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/notification_channels.png" alt=""><figcaption><p>Notification Channels</p></figcaption></figure> 
 
 ---
 
@@ -104,7 +106,10 @@ Once all sections are configured, review the dataset settings and publish the da
 1. Monitor the overall system health with infra cluster and health dashboards.  
 2. Gain insights into ingestion, processing, storage, and querying workflows through dedicated dashboards.  
 
-*(Insert image link here)*  
+<figure><img src="../.gitbook/assets/obsrv_v2/infra_metrics.png" alt=""><figcaption><p>Infra Metrics</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/ingestion_metrics.png" alt=""><figcaption><p>Ingestion Metrics</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/storage_metrics.png" alt=""><figcaption><p>Storage Metrics</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/processing_metrics.png" alt=""><figcaption><p>Processing Metrics</p></figcaption></figure> 
 
 ---
 
