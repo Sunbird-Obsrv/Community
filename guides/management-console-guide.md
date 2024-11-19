@@ -76,7 +76,7 @@ Manage and configure connectors for seamless data integration.
 
 Once all sections are configured, review the dataset settings and publish the dataset to make it live.  
 
-<figure><img src="../.gitbook/assets/obsrv_v2/storage_configuration.png" alt=""><figcaption><p>Storage Configuration</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/storage_configurations.png" alt=""><figcaption><p>Storage Configuration</p></figcaption></figure> 
 
 ---
 
@@ -84,8 +84,9 @@ Once all sections are configured, review the dataset settings and publish the da
 1. View all datasets with their status, metrics, and health information on a consolidated list.  
 2. Click on a dataset to view its detailed configuration and insights.  
 3. Retire unused datasets to maintain an organized environment.  
+<figure><img src="../.gitbook/assets/obsrv_v2/dataset_list.png" alt=""><figcaption><p>Live Dataset List</p></figcaption></figure> 
+<figure><img src="../.gitbook/assets/obsrv_v2/dataset_retire.png" alt=""><figcaption><p>Retired Dataset List</p></figcaption></figure> 
 
-*(Insert image link here)*  
 
 ---
 
