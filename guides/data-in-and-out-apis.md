@@ -8,7 +8,7 @@ description: List of APIs to write and read data
 
 The Data In APIs facilitate writing data into datasets, designed to simplify the ingestion of JSON data
 
-{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/in/{datasetId}" method="post" %}
+{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/in/{dataset_id}" method="post" %}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
 {% endswagger %}
 
@@ -16,13 +16,10 @@ The Data In APIs facilitate writing data into datasets, designed to simplify the
 
 Use the Data Out APIs to fetch data from a dataset with support for SQL and Druid native query formats, suitable for analytics and visualization.
 
-{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" examples="example1"%}
+{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/test" method="post"%}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{datasetId}" method="post" examples="example2"%}
-[https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
-{% endswagger %}
 
 ### Template APIs
 
