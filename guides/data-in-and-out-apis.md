@@ -16,7 +16,7 @@ The Data In APIs facilitate writing data into datasets, designed to simplify the
 
 Use the Data Out APIs to fetch data from a dataset with support for SQL and Druid native query formats, suitable for analytics and visualization.
 
-{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/test" method="post"%}
+{% swagger src="https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml" path="/v2/data/query/{dataset_id}" method="post"%}
 [https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml](https://raw.githubusercontent.com/Sanketika-Obsrv/obsrv-api-service/main/api-service/swagger-doc/openapi_v2.yml)
 {% endswagger %}
 
