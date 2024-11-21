@@ -80,3 +80,4 @@
     * [Raise an Issue](https://github.com/Sunbird-Obsrv/Community/discussions/14)
 * [Release Notes](release-notes/README.md)
   * [Obsrv 1.1.0 Beta Release](release-notes/1.1.0-beta.md)
+  * [Obsrv 1.2.0-RC Release](release-notes/1.2.0-RC.md)

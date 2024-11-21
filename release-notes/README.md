@@ -5,5 +5,5 @@ The table below provides a concise overview of the release version and its corre
 | **Release Version** | **Release Date** |
 |---------------------|-------------------|
 | [Obsrv 1.1.0 Beta Release](1.1.0-beta.md)    | 31st August 2024  |
-
+| [Obsrv 1.2.0-RC Release](1.2.0-RC.md)    | 8th November 2024  |
 
