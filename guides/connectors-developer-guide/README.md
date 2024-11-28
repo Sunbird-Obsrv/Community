@@ -4,15 +4,33 @@ Connectors, alongside datasets, are fundamental components of Obsrv. While datas
 
 This section will guide you through the process of developing, packaging, and deploying connectors using the provided SDKs and repositories. The connectors can be written in Scala, Java, or Python and can work with various data processing frameworks like Spark and Flink.
 
-## Repositories
+## Connector Types
 
-To begin developing a connector-based application, clone the corresponding repositories.
+Batch connectors are designed to handle data in chunks or sets, enabling efficient processing of large volumes of data that do not require immediate handling. These connectors are ideal for use cases where data can be accumulated and processed at scheduled intervals. In contrast, streaming connectors are built to process data in real-time, providing instant insights and immediate data handling as it flows into the system. Streaming connectors are essential for applications that demand continuous data updates and low-latency processing, such as real-time analytics and monitoring systems. Together, these connectors facilitate seamless data integration across varying use cases and workloads.
 
-### Scala and Java Repositories
+### Source Connectors
 
-* [**job-sdk-scala**](https://github.com/Sunbird-Obsrv/job-sdk-scala): This repository houses the Software Development Kit (SDK) for crafting jobs in Scala and Java. It encompasses modules for fundamental functionalities, as well as specialized modules for Flink and Spark.
-* [**connector-sdk-scala**](https://github.com/Sunbird-Obsrv/connector-sdk-scala): This repository furnishes the SDK for constructing connectors in Scala and Java. It includes core functionalities and specialized modules for Flink and Spark.
+#### Batch Connectors
 
-### Python Repositories
+Batch connectors are commonly used to pull data from various sources such as databases and file systems. These connectors operate over accumulated data over time and then processing it collectively at scheduled intervals. This approach is especially effective when working with data stored in database systems or file systems by using frameworks such as Apache Spark, which can handle large datasets efficiently. By executing these tasks on a scheduled basis, batch connectors optimize resource usage and ensure that large volumes of data are processed with minimal latency.
 
-* [**obsrv-python-sdk**](https://github.com/Sunbird-Obsrv/obsrv-python-sdk): The repository offers a Python SDK for developing connectors. It includes the requisite modules and configurations to facilitate the creation of connectors.
+{% hint style="info" %}
+Current versions of SDKs are available for Java, Scala, and Python.
+{% endhint %}
+
+#### Streaming Connectors
+
+Streaming connectors that run on Apache Flink are crucial for integrating and processing real-time data streams from platforms like Apache Kafka, Amazon Kinesis, and Debezium. These connectors facilitate the seamless ingestion and processing of data in a distributed, fault-tolerant manner, enabling applications to react to data as it arrives. By leveraging Flink's robust stateful processing capabilities, these connectors support complex event processing, real-time analytics, and continuous data transformations, making them ideal for scenarios requiring immediate insights and low-latency responses.
+
+{% hint style="info" %}
+Current versions of SDKs are available for Java and Scala.
+{% endhint %}
+
+### Sink Connectors
+
+Sink connectors are used to export data from centralized data platforms, like Obsrv, to various external systems and storage solutions. These connectors ensure that processed data can be efficiently moved to destinations such as data warehouses, cloud storage services, and analytics platforms. By leveraging sink connectors, businesses can maintain updated datasets across multiple systems, enabling actionable insights and enhanced data-driven decision-making.
+
+{% hint style="info" %}
+Current versions of SDKs don’t support Sink Connectors and are under development and not available as of now.
+{% endhint %}
+

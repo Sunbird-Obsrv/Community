@@ -1,10 +1,14 @@
-# Packaging
+# Packaging Guide
 
 ## Bundling Streaming Connectors
 
 ### Java / Scala
 
-The stream connectors are expected to be bunlded as a Single JAR (Fat JAR). We recommend using some thing like `maven-shade-plugin` to build the final JAR file.
+{% hint style="info" %}
+The below document outlines the structure if you are using `mvn` as your build tool. If you are using `sbt` or others, use the following as reference and update accordingly to generate the package structure.
+{% endhint %}
+
+The stream connectors are expected to be bundled as a Single JAR (Fat JAR). We recommend using some thing like `maven-shade-plugin` to build the final JAR file.
 
 Additionally, we recommend using `maven-assembly-plugin` to bundle all required files and JAR into a single distribution.
 
@@ -128,7 +132,6 @@ example-connector-0.1.0-distribution.tar.gz
 ├── alerts.yaml
 ├── metadata.json
 ├── metrics.yaml
-├── requirements.txt
 ├── ui-config.json
 └── icon.svg
 ```
@@ -253,7 +256,8 @@ def main():
     os.makedirs(jar_dir, exist_ok=True)
 
     subprocess.Popen("""poetry export --without-hashes --format=requirements.txt | awk '{split($0,a,"; "); print a[1]}' > requirements.txt""", shell=True).wait()
-    subprocess.Popen("mvn dependency:copy-dependencies -DrepoUrl=http://repo1.maven.org/maven2/ -DexcludeTrans -DoutputDirectory=libs", shell=True).wait()
+    # TODO: Only uncomment the below line, if you have Java dependencies for your script, which have to be included in the libs folder
+    # subprocess.Popen("mvn dependency:copy-dependencies -DrepoUrl=http://repo1.maven.org/maven2/ -DexcludeTrans -DoutputDirectory=libs", shell=True).wait()
     subprocess.Popen("poetry build -f sdist", shell=True).wait()
     subprocess.Popen("rm -rf requirements.txt libs", shell=True).wait()
 
@@ -271,7 +275,7 @@ packages = [
 
 include = [
     "requirements.txt",
-    "libs/*.jar",
+    # "libs/*.jar", # TODO: Only uncomment the below line, if you have Java dependencies for your script, which have to be included in the libs folder
     "ui-config.json",
     "metadata.json",
     "alerts.yaml",

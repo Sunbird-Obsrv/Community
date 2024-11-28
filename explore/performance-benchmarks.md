@@ -4,7 +4,7 @@ description: Proof of the pudding for scalability of Obsrv
 
 # Performance Benchmarks
 
-> <mark style="color:orange;">**Note:**</mark>** **_<mark style="color:blue;">**This is a work in progress page. Following results are from initial benchmarks. Detailed benchmarks will be added shortly once the benchmark exercise is completed**</mark>_
+> <mark style="color:orange;">**Note:**</mark>**&#x20;**_<mark style="color:blue;">**This is a work in progress page. Following results are from initial benchmarks. Detailed benchmarks will be added shortly once the benchmark exercise is completed**</mark>_
 
 ### Cluster Size
 
