@@ -149,10 +149,7 @@ Ref: [https://github.com/Sunbird-Obsrv/connector-sdk-scala/](https://github.com/
 {% endtab %}
 {% endtabs %}
 
-TODO:&#x20;
 
-1. Add explanation about what constitutes ConnectorContext, ErrorData and MetricData
-2. Add details on how to save,retrieve and clear state and connector stats
 
 
 
