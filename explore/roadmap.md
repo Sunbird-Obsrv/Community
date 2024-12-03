@@ -1,9 +1,8 @@
 
 ---
 
-# **Obsrv Roadmap**
 
-**_Description: A comprehensive overview of the features released, in-progress, and upcoming in Obsrv._**
+**Description**: A comprehensive overview of the features released, in-progress, and upcoming in Obsrv.
 
 ## **Completed Features (1.2.0-RC)**
 
