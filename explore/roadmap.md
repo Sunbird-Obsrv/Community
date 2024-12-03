@@ -1,3 +1,4 @@
+
 ---
 
 # **Obsrv Roadmap**
@@ -30,5 +31,3 @@
 | **Connector Framework Stabilization** | - Optimization and stabilization of the connector framework and its supported connectors.                                                             | **Planned**       | **Future**  |
 
 ---
-
-This version includes all necessary fixes and organizes the completed and upcoming features clearly, keeping everything consistent for the roadmap.
