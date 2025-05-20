@@ -1,5 +1,6 @@
 ---
 description: A deep-dive into core concepts of Obsrv
+icon: lightbulb
 ---
 
 # Core Concepts

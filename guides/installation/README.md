@@ -1,8 +1,9 @@
 ---
 description: Instructions to install Obsrv in various environments.
+icon: sign-posts-wrench
 ---
 
-# Installation
+# Installation Guide
 
 Obsrv has complete automated installation scripts to setup Obsrv in various environments. With the provided automation, Obsrv can be installed in any environment within 1 hour (post completion of pre-requisites setup).
 

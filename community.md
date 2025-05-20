@@ -1,5 +1,6 @@
 ---
 description: How to participate in Obsrv community
+icon: people-line
 ---
 
 # Community

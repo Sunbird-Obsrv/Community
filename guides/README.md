@@ -1,5 +1,6 @@
 ---
 description: Documentation to install and operate an Obsrv instance
+icon: person-chalkboard
 ---
 
 # Guides

@@ -1,8 +1,9 @@
 ---
 description: Instructions to install in Azure infra
+icon: microsoft
 ---
 
-# Azure Installation Guide
+# Azure
 
 ### Infrastructure Requirements
 

@@ -14,10 +14,10 @@ The challenge of reliably managing the data value chain is growing for numerous 
 
 The challenges faced by most of the organizations in operating a data value chain mainly falls into one of the following four categories:
 
-1. Time: Significant amount of time mis-spent in managing the solution rather than in leveraging data's full potential
-2. Cost: High upfront CapEx and running costs
-3. Capability: Challenges to build, manage and operate complex data technologies & systems
-4. Risk: Business & technical risks due to propietary & fragmented solutions, rigid & less reliable systems
+1. **Time**: Significant amount of time mis-spent in managing the solution rather than in leveraging data's full potential
+2. **Cost**: High upfront CapEx and running costs
+3. **Capability**: Challenges to build, manage and operate complex data technologies & systems
+4. **Risk**: Business & technical risks due to propietary & fragmented solutions, rigid & less reliable systems
 
 Listed below are some challenges that are often faced by organizations with data platforms & solutions:
 

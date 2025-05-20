@@ -1,5 +1,6 @@
 ---
 description: Instructions to install in GCP infra
+icon: google
 ---
 
 # GCP Installation Guide

@@ -1,5 +1,6 @@
 ---
 description: Instructions to install in on-prem data centre
+icon: computer
 ---
 
 # Data Center Installation Guide

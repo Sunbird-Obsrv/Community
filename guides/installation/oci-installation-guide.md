@@ -1,5 +1,6 @@
 ---
 description: Instructions to install in OCI
+icon: o
 ---
 
 # OCI Installation Guide
