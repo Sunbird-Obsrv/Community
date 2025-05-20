@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Welcome to Obsrv](README.md)
   * [The Value of Data](introduction/the-value-of-data.md)
   * [Data Value Chain](introduction/data-value-chain.md)
   * [Challenges](introduction/challenges.md)

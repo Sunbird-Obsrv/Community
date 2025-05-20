@@ -18,9 +18,9 @@ Obsrv brings together the best data tools and technologies, and seamlessly orche
 
 Key Benefits of Obsrv include:
 
-* Unified Data Infrastructure: Obsrv is an end-to-end low-code data platform, facilitating integration of data from diverse sources, adaptable to changes and generating valuable insights.
-* Built-in Observability: Obsrv possesses innate observability, knows when the data breaks and avoids data down times, ensuring a continuous and reliable data flow.
-* Reliability by Design: Obsrv is engineered with extreme automation, ensuring seamless & reliable operation irrespective of the scale at which it is deployed.
-* Instant Data Utilization: Obsrv facilitates configuration for input data sources, transformations, and the entire pipeline effortlessly, without the need for coding.
-* Diverse Applications: Obsrv empowers use of data across a spectrum of scenarios, including real-time applications, ensuring organizations stay ahead in the era of rapid data-driven decision-making.
-* Freedom: Obsrv uses open technologies & formats and its core engine is fully open source, guaranteeing zero lock-in and complete freedom to operate & exit.
+* **Unified Data Infrastructure:** Obsrv is an end-to-end low-code data platform, facilitating integration of data from diverse sources, adaptable to changes and generating valuable insights.
+* **Built-in Observability:** Obsrv possesses innate observability, knows when the data breaks and avoids data down times, ensuring a continuous and reliable data flow.
+* **Reliability by Design:** Obsrv is engineered with extreme automation, ensuring seamless & reliable operation irrespective of the scale at which it is deployed.
+* **Instant Data Utilization:** Obsrv facilitates configuration for input data sources, transformations, and the entire pipeline effortlessly, without the need for coding.
+* **Diverse Applications:** Obsrv empowers use of data across a spectrum of scenarios, including real-time applications, ensuring organizations stay ahead in the era of rapid data-driven decision-making.
+* **Freedom:** Obsrv uses open technologies & formats and its core engine is fully open source, guaranteeing zero lock-in and complete freedom to operate & exit.
