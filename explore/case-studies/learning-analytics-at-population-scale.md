@@ -23,7 +23,6 @@ Any learning analytics system which aims at gathering insights into interactions
 
 
 
-\
+<br>
 
-
-\
+<br>

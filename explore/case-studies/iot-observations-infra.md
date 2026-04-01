@@ -24,9 +24,8 @@ Obsrv helps the process of precision farming through
 * **Crop Monitoring**: Obsrv helps in continuous monitoring of crops through the IoT observations which in turn aids the farmers to derive insights into environmental conditions, soil health, and plant growth. This enables timely interventions and adjustments to maximize yield.
 * **Predictive Analytics**: IoT measurements contribute to predictive analytics, helping farmers anticipate and mitigate potential issues such as diseases, pests, or adverse weather conditions. This proactive approach enhances crop protection and overall productivity.
 
-\
+<br>
 
 
 
-
-\
+<br>

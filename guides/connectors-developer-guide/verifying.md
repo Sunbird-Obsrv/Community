@@ -50,16 +50,13 @@ The `connector_config` in the instances uses AES ECB encryption with a key size 
 >
 >
 > For example the following JSON Config \
-> `{"source_ip": "localhost", "source_port": 5432, "source_db": "obsrv", "table": "datasets"}` \
+> `{"source_ip": "localhost", "source_port": 5432, "source_db": "obsrv", "table": "datasets"}` <br>
 >
->
-> with a secret `strong_encryption_key_to_encrypt` \
->
+> with a secret `strong_encryption_key_to_encrypt` <br>
 >
 > should generate an encrypted string equal to&#x20;
 >
-> `mmT3tqwpq798ywgsdfEdhtp5VXcFzFjutmaEuFqAw9fl4G4OtK6vz89Nhd/deChFWzW3yJWB3Y//SpDzwc3RY31FGqwnAhhD3fpjXP+XYHthCWxBIKar5j8pdTBZ867J` \
->
+> `mmT3tqwpq798ywgsdfEdhtp5VXcFzFjutmaEuFqAw9fl4G4OtK6vz89Nhd/deChFWzW3yJWB3Y//SpDzwc3RY31FGqwnAhhD3fpjXP+XYHthCWxBIKar5j8pdTBZ867J` <br>
 >
 > which can be verfied online, before you encrypt your config. Upon decrypting it should be a valid JSON
 
