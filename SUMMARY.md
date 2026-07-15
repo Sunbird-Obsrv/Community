@@ -39,6 +39,8 @@
   * [Developer Guide](guides/developer-guide.md)
   * [Example Datasets](guides/example-datasets/README.md)
     * [OpenTelemetry (OTEL) Integration](guides/example-datasets/opentelemetry-otel-integration.md)
+  * [How Tos](guides/how-tos/README.md)
+    * [Extending Obsrv with Custom Processing Logic](guides/how-tos/custom-code-injection.md)
   * [Connectors Developer Guide](guides/connectors-developer-guide/README.md)
     * [SDK Assumptions](guides/connectors-developer-guide/connector-types.md)
     * [Required Files](guides/connectors-developer-guide/required-files/README.md)
