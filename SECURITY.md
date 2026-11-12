@@ -13,15 +13,11 @@ Include as much as you can:
 * Steps to reproduce it, including configuration or sample data where relevant
 * Any logs, stack traces or proof-of-concept code
 
-You do not need a working exploit to report something. If you think a behaviour looks wrong, tell us.
+You do not need a working exploit to report something. If you think a behavior looks wrong, tell us.
 
 ## What happens next
 
-| When | What |
-| --- | --- |
-| Within 3 working days | We acknowledge your report |
-| Within 10 working days | We confirm whether we can reproduce it and give you an initial assessment |
-| Thereafter | We keep you updated at least every 2 weeks until it is resolved |
+We acknowledge your report within 3 working days. Within 10 working days we tell you whether we could reproduce it and give you our initial assessment. After that we keep you updated at least every 2 weeks until it is resolved.
 
 Once a fix is ready we publish it as a release and note the issue in the release notes. We will credit you by name unless you ask us not to.
 
@@ -35,8 +31,8 @@ See the [release notes](https://obsrv.sunbird.org/release-notes) for the current
 
 ## Scope
 
-This policy covers the Obsrv components published under the [Sunbird-Obsrv organisation](https://github.com/orgs/Sunbird-Obsrv/repositories).
+This policy covers the Obsrv components published under the [Sunbird-Obsrv organization](https://github.com/orgs/Sunbird-Obsrv/repositories).
 
-Obsrv is deployed into infrastructure that you operate. Vulnerabilities in the underlying components Obsrv builds on — Apache Kafka, Flink, Spark, Druid, PostgreSQL and the rest — should go to those projects directly. If you are not sure which applies, report it to us and we will route it.
+Obsrv is deployed into infrastructure that you operate. Vulnerabilities in the underlying components that Obsrv builds on, such as Apache Kafka, Flink, Spark, Druid and PostgreSQL, should go to those projects directly. If you are not sure which applies, report it to us and we will route it.
 
 The published version lives at <https://obsrv.sunbird.org/engage/security>.
