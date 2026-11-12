@@ -40,4 +40,4 @@ Reports are held in confidence. We will not share your identity with the person 
 
 ## Acknowledgements
 
-This Code of Conduct follows the shared practices of the [Sunbird](https://sunbird.org) community and is adapted from the [Sunbird RC Code of Conduct](https://rc.sunbird.org/engage/code-of-conduct).
+This Code of Conduct follows the shared practices of the [Sunbird](https://sunbird.org) community.
