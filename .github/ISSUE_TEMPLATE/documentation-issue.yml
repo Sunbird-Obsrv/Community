@@ -1,0 +1,30 @@
+name: Documentation issue
+description: Report something wrong, unclear or missing in the Obsrv documentation
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the docs. For bugs in Obsrv itself, please start a thread in the [discussion forum](https://github.com/orgs/Sunbird-Obsrv/discussions) instead.
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: The URL on obsrv.sunbird.org, or the path to the Markdown file.
+      placeholder: https://obsrv.sunbird.org/guides/developer-guide
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing?
+      description: Quote the text if it is an error, or describe what you expected to find.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should it say instead?
+      description: Optional. If you already know the fix, tell us and we can get it in faster.
+    validations:
+      required: false

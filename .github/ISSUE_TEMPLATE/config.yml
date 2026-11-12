@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question or start a discussion
+    url: https://github.com/orgs/Sunbird-Obsrv/discussions
+    about: Questions, installation help and feature ideas start in the community forum.
+  - name: Report a security vulnerability
+    url: https://obsrv.sunbird.org/engage/security
+    about: Please report vulnerabilities privately, not as a public issue.
+  - name: Chat with the community on Discord
+    url: https://discord.gg/Q5mvw2mGC8
+    about: For quick questions and informal discussion.

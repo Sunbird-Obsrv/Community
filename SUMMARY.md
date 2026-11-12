@@ -64,6 +64,8 @@
     * [Reference Implementations](guides/connectors-developer-guide/reference-implementations.md)
   * [Coming Soon!](guides/coming-soon.md)
 * [Community](community.md)
+  * [Code of Conduct](engage/code-of-conduct.md)
+  * [Security Policy](engage/security.md)
 * [Previous Versions](previous-versions/README.md)
   * [SB-5.0 Version](previous-versions/sb-5.0-version/README.md)
     * [Overview](previous-versions/sb-5.0-version/readme.md)
